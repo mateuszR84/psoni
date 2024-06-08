@@ -1,0 +1,8 @@
+{
+    "name": "studio-devs/psoni-theme",
+    "type": "october-theme",
+    "description": "Psoni",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
