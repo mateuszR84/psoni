@@ -7,13 +7,6 @@
     <meta name="author" content="Mateusz Rycombel">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>{{ this.page.title }}</title>
-    <meta content="Kompleksowa obsługa w zakresie pośrednictwa w obrocie nieruchomościami. Staszów i okolice." name="description">
-    <meta content=" Staszów Nieruchomości, Mieszkanie Staszów,  Dom Staszów, Nieruchomości Staszów, Sprzedaż Nieruchomości Staszów, 
-    Pośrednik nieruchomośći Staszów, Biuro Nieruchomości Staszów, Biuro nieruchomośći świętokrzyskie,
-    Nieruchomości świętokrzyskie, Mieszkanie Na Sprzedaż Staszów, Dom Na Sprzedaż Staszów, 
-    Sprzedam Dom Staszów, Sprzedam Mieszkanie Staszów, Mieszkanie Do Wynajęcia Staszów, Nieruchomości Połaniec,
-    nieruchomości Busko Zdrój, Pośrednik Nieruchomości świętokrzyskie, świętokrzyskie, 
-    Wynajem świętokrzyskie, nieruchomości staszów i okolice" name="keywords">
     <!-- OG -->
     <meta property="og:title" content="{{ this.page.title }}">
 
@@ -23,6 +16,9 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{'assets/css/style.css' | theme }}" rel="stylesheet">
@@ -35,6 +31,7 @@
 </head>
 
 <body>
+    {% partial 'common/header' %}
     {% page %}
 
     <a href="#"
@@ -42,6 +39,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    {% partial 'common/footer' %}
     {% scripts %}
 </body>
 </html>
