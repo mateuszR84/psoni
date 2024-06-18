@@ -52,14 +52,41 @@ a:hover {
     color: #F18F28;
 }
 
+.psoni-nav {
+    font-weight: 200px;
+    border-top: #4267B0 4px solid;
+}
+
+.orew-nav {
+    font-weight: 200px;
+    border-top: #F2BC2D 4px solid;
+}
+
+.nps-nav {
+    font-weight: 200px;
+    border-top: #CA3768 4px solid;
+}
+
+.sds-nav {
+    font-weight: 200px;
+    border-top: #81256F 4px solid;
+}
+
+.pu-nav {
+    font-weight: 200px;
+    border-top: #BC4F2F 4px solid;
+}
+
+.pp-nav {
+    font-weight: 200px;
+    border-top: #FDB031 4px solid;
+}
+
 .btn-krs {
     color: #fff !important;
     background-color: #F18F28 !important;
 }
 
 .footer-top {
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     background-color: #F2F2F2;
 }
