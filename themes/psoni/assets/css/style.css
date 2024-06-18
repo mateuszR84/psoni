@@ -4,6 +4,15 @@ body {
     font-style: normal;
 }
 
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4267B0;
+}
+
 .main-element {
     min-height: 270px;
     color: #fff;
