@@ -1,5 +1,14 @@
 url = "/nps"
+layout = "nps"
 title = "NPS"
-layout = "default"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "nps"
+postsPerPage = 10
+noPostsMessage = "Nie znaleziono postów"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "home"
 ==
-{% partial 'navs/nps' %}
+{% component 'blogPosts' %}

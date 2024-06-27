@@ -35,6 +35,21 @@ a:hover {
     background-color: #F4F4F4;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
 .psoni {
     background-color: #4267B0;
 }
