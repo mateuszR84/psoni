@@ -35,6 +35,11 @@ a:hover {
     background-color: #F4F4F4;
 }
 
+.img-posts-list {
+    max-width: 200px;
+    max-height: 200px;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
