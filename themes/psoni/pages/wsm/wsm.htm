@@ -1,0 +1,20 @@
+url = "/wsm/aktualnosci"
+layout = "wsm"
+title = "Aktualności"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "Brak aktualności"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "orew/news-item"
+==
+<div class="container">
+    <div class="row title-border">
+        <h1 class="pt-3 text-center text-uppercase">Aktualności</h1>
+    </div>
+    <div class="mt-4 mb-5">
+        {% partial 'posts/postlist' posts=posts %}
+    </div>
+</div>
