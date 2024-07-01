@@ -2,7 +2,7 @@
 
 <ul class="post-list">
     {% for post in posts %}
-    <a href={{ "news-item"|page({category: 'orew', slug: post.slug}) }}>
+    <a href={{ "news-item"|page({category: post.category, slug: post.slug}) }}>
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 <div class="col-md-3">
