@@ -79,10 +79,6 @@ th {
     background-color: #FDB031;
 }
 
-.mt {
-    background-color: #BB4E2F;
-}
-
 .krs {
     color: #F18F28;
 }
@@ -110,6 +106,7 @@ th {
 .pu-nav {
     font-weight: 200px;
     border-top: #BC4F2F 4px solid;
+    border-bottom: #BC4F2F 1px solid;
 }
 
 .pu.title {
@@ -119,26 +116,6 @@ th {
 .pp-nav {
     font-weight: 200px;
     border-top: #FDB031 4px solid;
-}
-
-.mt-nav {
-    font-weight: 200px;
-    border-top: #BB4E2F 4px solid;
-}
-
-.kt-nav {
-    font-weight: 200px;
-    border-top: #81256E 4px solid;
-}
-
-.wsm-nav {
-    font-weight: 200px;
-    border-top: #aa8b26 4px solid;
-}
-
-.ord-nav {
-    font-weight: 200px;
-    border-top: #9c0f32 4px solid;
 }
 
 .btn-krs {
@@ -153,16 +130,7 @@ th {
 .no-style li {
     list-style-type: none;
 }
-
 #map-large {
     height: 100vh;
     width: auto;
-}
-
-#map {
-    height: 250px;
-    width: auto;
-}
-.pu-header {
-    color: #4267B0;
 }
