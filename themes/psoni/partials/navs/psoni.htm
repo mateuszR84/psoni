@@ -1,32 +1,46 @@
 <nav class="navbar navbar-expand-lg psoni-nav">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Aktualności</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">O nas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sprawozdania</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Darczyńcy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Placówka w Kurozwękach</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Przetargi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kontakt</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Aktualności</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O nas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'psoni/stowarzyszenie'|page }}">Stowarzyszenie</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Historia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'psoni/zarzad'|page }}">Zarząd</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'psoni/lokalizacja'|page }}">Lokalizacja</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sprawozdania</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ 'psoni/darczyncy'|page }}">Darczyńcy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Placówka w Kurozwękach</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Przetargi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ 'psoni/kontakt'|page }}">Kontakt</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

@@ -126,3 +126,8 @@ th {
 .footer-top {
     background-color: #F2F2F2;
 }
+
+#map-large {
+    height: 100vh;
+    width: auto;
+}
