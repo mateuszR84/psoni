@@ -150,3 +150,8 @@ th {
 .footer-top {
     background-color: #F2F2F2;
 }
+
+#map {
+    height: 250px;
+    width: auto;
+}

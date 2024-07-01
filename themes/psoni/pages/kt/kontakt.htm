@@ -13,4 +13,18 @@ title = "Aktualności"
         <p>tel. 15 864 37 09</p>
         <p>e-mail: <a href="orew.staszow@psouu-staszow.org">orew.staszow@psouu-staszow.org</a></p>
     </div>
+
+    <section class="map mb-3">
+        <div id="map"></div>
+    </section>
+
 </div>
+
+<script>
+    var map = L.map('map', { scrollWheelZoom: false }).setView([{{ 50.591100 }}, {{ 21.094920 }}], 17);
+    var marker = L.marker([{{ 50.591100 }}, {{ 21.094920 }}]).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+</script>
