@@ -106,6 +106,7 @@ th {
 .pu-nav {
     font-weight: 200px;
     border-top: #BC4F2F 4px solid;
+    border-bottom: #BC4F2F 1px solid;
 }
 
 .pu.title {
