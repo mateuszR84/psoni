@@ -1,0 +1,23 @@
+url = "/psoni/aktualnosci"
+layout = "psoni"
+title = "Aktualności"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "psoni"
+postsPerPage = 3
+noPostsMessage = "Brak aktualności"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "psoni/news-item"
+==
+<div class="title-border">
+    <h1 class="pt-3 text-center text-uppercase">Aktualności</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="mt-4 mb-5">
+            {% partial 'posts/postlist-psoni' posts=posts %}
+        </div>
+    </div>
+</div>
