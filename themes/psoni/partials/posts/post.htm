@@ -22,5 +22,5 @@
             <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
         {% endfor %}
     {% endif %}
-    | data publikacji {{ post.published_at|date('M d, Y') }}
+    | data publikacji {{ post.published_at|date('d-m-Y') }}
 </p>
