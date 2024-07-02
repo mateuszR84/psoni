@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Mateusz Rycombel">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>NPS | {{ this.page.title }}</title>
+    <title>PU | {{ this.page.title }}</title>
     <!-- OG -->
     <meta property="og:title" content="{{ this.page.title }}">
 
@@ -31,8 +31,9 @@
 </head>
 
 <body>
-    {% partial 'common/header-nps' %}
-    {% partial 'navs/nps' %}
+    {% partial 'common/header-pu' %}
+    <h4 class="text-center text-uppercase pu-header">Projekt unijny pn. "Utworzenie świetlicy terapeutycznej w Kurozwękach dla osób z niepełnosprawnością intelektualną"</h4>
+    {% partial 'navs/pu' %}
     {% page %}
 
     <a href="#"

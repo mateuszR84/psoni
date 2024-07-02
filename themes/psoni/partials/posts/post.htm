@@ -17,11 +17,10 @@
 {% endif %}
 
 <p class="info">
-    Opublikowano w:
-    {% if post.categories|length %} in
+    {% if post.categories|length %}
         {% for category in post.categories %}
             <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
         {% endfor %}
     {% endif %}
-    on {{ post.published_at|date('M d, Y') }}
+    | data publikacji {{ post.published_at|date('d-m-Y') }}
 </p>
