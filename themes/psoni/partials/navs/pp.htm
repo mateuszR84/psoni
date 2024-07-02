@@ -1,23 +1,91 @@
-<nav class="navbar navbar-expand-lg pp-nav">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active text-uppercase" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Mieszkanie treningowe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Klub Terapeutyczny</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">WSM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ośrodek Rehabilitacji Dziennej</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg pp-nav mb-2">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mieszkanie Treningowe</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'mt/mt'|page }}">Aktualności</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'mt/o-projekcie'|page }}">O projekcie</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'mt/wsparcie'|page }}">Formy wsparcia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'mt/galeria'|page }}">Galeria</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'mt/kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Klub Terapeutyczny</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'kt/kt'|page }}">Aktualności</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'kt/o-projekcie'|page }}">O projekcie</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'kt/wsparcie'|page }}">Formy wsparcia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'kt/galeria'|page }}">Galeria</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'kt/kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">WSM</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'wsm/wsm'|page }}">Aktualności</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'wsm/o-programie'|page }}">O programie</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'wsm/tablica'|page }}">Tablica informacyjna</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'wsm/galeria'|page }}">Galeria</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'wsm/kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ośrodek Rehabilitacji Dziennej</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'ord/ord'|page }}">Aktualności</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'ord/o-projekcie'|page }}">O projekcie</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'ord/wsparcie'|page }}">Formy wsparcia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'ord/galeria'|page }}">Galeria</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'ord/kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
