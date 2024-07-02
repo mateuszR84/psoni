@@ -90,26 +90,31 @@ th {
 .psoni-nav {
     font-weight: 200px;
     border-top: #4267B0 4px solid;
+    background-color: #fff;
 }
 
 .orew-nav {
     font-weight: 200px;
     border-top: #F2BC2D 4px solid;
+    background-color: #fff;
 }
 
 .nps-nav {
     font-weight: 200px;
     border-top: #CA3768 4px solid;
+    background-color: #fff;
 }
 
 .sds-nav {
     font-weight: 200px;
     border-top: #81256F 4px solid;
+    background-color: #fff;
 }
 
 .pu-nav {
     font-weight: 200px;
     border-top: #BC4F2F 4px solid;
+    background-color: #fff;
 }
 
 .pu.title {
@@ -119,26 +124,31 @@ th {
 .pp-nav {
     font-weight: 200px;
     border-top: #FDB031 4px solid;
+    background-color: #fff;
 }
 
 .mt-nav {
     font-weight: 200px;
     border-top: #BB4E2F 4px solid;
+    background-color: #fff;
 }
 
 .kt-nav {
     font-weight: 200px;
     border-top: #81256E 4px solid;
+    background-color: #fff;
 }
 
 .wsm-nav {
     font-weight: 200px;
     border-top: #aa8b26 4px solid;
+    background-color: #fff;
 }
 
 .ord-nav {
     font-weight: 200px;
     border-top: #9c0f32 4px solid;
+    background-color: #fff;
 }
 
 .btn-krs {
@@ -148,6 +158,10 @@ th {
 
 .footer-top {
     background-color: #F2F2F2;
+}
+
+.footer-bottom {
+    border-top: #4267B0 1px solid;
 }
 
 .no-style li {
