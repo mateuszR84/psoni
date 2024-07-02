@@ -16,7 +16,7 @@
     </div>
 {% endif %}
 
-<p class="info">
+<p class="info mt-4">
     {% if post.categories|length %}
         {% for category in post.categories %}
             <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
