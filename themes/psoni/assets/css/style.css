@@ -168,6 +168,10 @@ th {
     list-style-type: none;
 }
 
+.footer-links:link {
+    color: #81256E !important;
+}
+
 #map-large {
     height: 100vh;
     width: auto;
