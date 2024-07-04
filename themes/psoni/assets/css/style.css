@@ -1,5 +1,5 @@
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -12,6 +12,11 @@ a:link {
 
 a:hover {
     color: #4267B0;
+}
+
+.dropdown:hover .dropdown-menu {
+   display: block;
+   margin-top: 0;
 }
 
 .main-element {
