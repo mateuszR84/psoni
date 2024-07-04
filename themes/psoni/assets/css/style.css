@@ -14,10 +14,28 @@ a:hover {
     color: #4267B0;
 }
 
+/* Navigation */
 .dropdown:hover .dropdown-menu {
    display: block;
    margin-top: 0;
 }
+
+.nav-item.dropdown .dropdown-item:active {
+    background-color: #4267B0 !important;
+}
+
+.dropdown-menu {
+    background-color: #4267B0 !important;
+}
+
+.dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-item:hover {
+    background-color: #35528D !important;
+}
+/* -=-=- */
 
 .main-element {
     min-height: 270px;
