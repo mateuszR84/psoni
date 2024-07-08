@@ -4,7 +4,8 @@ layout = "pu"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 3
+postsPerPage = 10
+categoryFilter = "pu-osoby"
 noPostsMessage = "Brak aktualności"
 sortOrder = "published_at desc"
 categoryPage = "home"
@@ -15,6 +16,6 @@ postPage = "orew/news-item"
 </div>
 <div class="container">
     <div class="mt-4 mb-5">
-        {% partial 'posts/postlist' posts=posts %}
+        {% partial 'posts/postlist-pu' posts=posts %}
     </div>
 </div>

@@ -1,0 +1,22 @@
+{% if posts.lastPage > 1 %}
+<div class="mt-4">
+    <nav aria-label="Nawigacja strony ofert">
+        <ul class="pagination justify-content-center">
+            {% if posts.currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page }}{{ ((posts.currentPage-1) > 1 ? '?page='~(posts.currentPage-1) : null) }}" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>
+                </li>
+            {% endif %}
+            {% for page in 1..posts.lastPage %}
+                <li class="{{ posts.currentPage == page ? 'active' : null }} page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page}}?page={{ page }}">{{ page }}<a>
+                </li>
+            {% endfor %}
+            {% if posts.lastPage > posts.currentPage %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page }}?page={{ posts.currentPage+1 }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}

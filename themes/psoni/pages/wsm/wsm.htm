@@ -4,7 +4,8 @@ title = "Aktualności"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 3
+categoryFilter = "wsm"
+postsPerPage = 10
 noPostsMessage = "Brak aktualności"
 sortOrder = "published_at desc"
 categoryPage = "home"
@@ -15,6 +16,6 @@ postPage = "orew/news-item"
         <h1 class="pt-3 text-center text-uppercase">Aktualności</h1>
     </div>
     <div class="mt-4 mb-5">
-        {% partial 'posts/postlist' posts=posts %}
+        {% partial 'posts/postlist-wsm' posts=posts %}
     </div>
 </div>

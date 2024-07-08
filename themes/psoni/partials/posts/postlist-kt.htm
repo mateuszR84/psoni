@@ -3,7 +3,7 @@
 <ul class="post-list">
     {% for post in posts %}
     {% set category = post.categories|first %}
-    <a href={{ "psoni/news-item"|page({category: category.slug, slug: post.slug}) }}>
+    <a href={{ "kt/news-item"|page({category: category.slug, slug: post.slug}) }}>
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 {% if post.featured_images.count %}

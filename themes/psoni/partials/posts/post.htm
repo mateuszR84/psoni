@@ -1,5 +1,6 @@
 {% set post = post %}
 
+<h3 class="pt-3 mb-3 text-center text-uppercase">{{ post.title }}</h3>
 <div class="content">{{ post.content_html|raw }}</div>
 
 {% if post.featured_images|length %}
