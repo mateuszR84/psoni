@@ -108,7 +108,7 @@ th {
 }
 
 .krs {
-    color: #F18F28;
+    color: #EE7202;
 }
 
 .psoni-nav {
@@ -177,7 +177,7 @@ th {
 
 .btn-krs {
     color: #fff !important;
-    background-color: #F18F28 !important;
+    background-color: #EE7202 !important;
 }
 
 .footer-top {
@@ -213,4 +213,16 @@ th {
 .logo-fb {
     max-width: 50px;
     max-height: 50px;
+}
+
+.carousel-item img {
+    max-height: 530px !important;
+}
+.carousel-caption {
+  margin-top: -40px;
+  position: absolute;
+  left: 0 !important;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
