@@ -4,17 +4,18 @@ layout = "pu"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 3
+postsPerPage = 10
+categoryFilter = "pu-rodzice"
 noPostsMessage = "Brak aktualności"
 sortOrder = "published_at desc"
 categoryPage = "home"
 postPage = "orew/news-item"
 ==
 <div class="title-border">
-    <h1 class="pt-3 text-center text-uppercase">Rodzice osób z niepełnosprawnością intelektualną</h1>
+    <h1 class="py-1 text-center text-uppercase">Rodzice osób z niepełnosprawnością intelektualną</h1>
 </div>
 <div class="container">
     <div class="mt-4 mb-5">
-        {% partial 'posts/postlist' posts=posts %}
+        {% partial 'posts/postlist-pu' posts=posts %}
     </div>
 </div>

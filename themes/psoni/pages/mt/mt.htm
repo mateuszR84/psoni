@@ -4,16 +4,17 @@ title = "Aktualności"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 3
+postsPerPage = 10
+categoryFilter = "mtr"
 noPostsMessage = "Brak aktualności"
 sortOrder = "published_at desc"
 categoryPage = "home"
 postPage = "orew/news-item"
 ==
+<div class="title-border">
+    <h1 class="py-1 text-center text-uppercase">Aktualności</h1>
+</div>
 <div class="container">
-    <div class="row title-border">
-        <h1 class="pt-3 text-center text-uppercase">Aktualności</h1>
-    </div>
     <div class="mt-4 mb-5">
         {% partial 'posts/postlist' posts=posts %}
     </div>

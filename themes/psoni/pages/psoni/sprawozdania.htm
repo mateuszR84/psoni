@@ -3,13 +3,16 @@ layout = "psoni"
 title = "Sprawozdania"
 ==
 <div class="title-border">
-    <h1 class="pt-3 text-center text-uppercase mb-2">Sprawozdania</h1>
+    <h1 class="py-1 text-center text-uppercase mb-2">Sprawozdania</h1>
 </div>
 <div class="container mt-2">
     <div class="row">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#2022" type="button" role="tab" aria-controls="2022" aria-selected="true">2022</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#2023" type="button" role="tab" aria-controls="2023" aria-selected="true">2023</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#2022" type="button" role="tab" aria-controls="2022" aria-selected="true">2022</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#2021" type="button" role="tab" aria-controls="2021" aria-selected="false">2021</button>
@@ -31,7 +34,14 @@ title = "Sprawozdania"
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active mt-5 mb-4" id="2022" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active text-center mt-5 mb-4" id="2023" role="tabpanel" aria-labelledby="home-tab">
+                <h3 class="text-center">Sprawozdanie finansowe za okres 01 stycznia 2023 do 31 grudnia 2023</h3>
+                <ul style='list-style-type: none;'>
+                    <a href=""><li class="mt-5 mb-4">Sprawozdanie merytoryczne 2023</li></a>
+                    <a href=""><li class="mb-4">Sprawozdanie finansowe 2023</li></a>
+                </ul>
+            </div>
+            <div class="tab-pane fade text-center mt-5 mb-4" id="2022" role="tabpanel" aria-labelledby="home-tab">
                 <h3 class="text-center">Sprawozdanie finansowe za okres 01 stycznia 2022 do 31 grudnia 2022</h3>
                 <ul style='list-style-type: none;'>
                     <a href=""><li class="mt-5 mb-4">Sprawozdanie merytoryczne 2022</li></a>
