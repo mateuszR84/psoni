@@ -1,18 +1,18 @@
-name: Deploy to stage
-on:
-    push:
-        branches:
-            - develop
-jobs:
-    deploy-to-stage:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: webfactory/ssh-agent@v0.9.0
-              with:
-                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-            - run: 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-            - run: 'composer -V'
-            - run: 'php -v'
-            - run: ssh mateuszr84@mateuszr84.atthost24.pl -p 6022 \
-            - run: 'echo "im on server"'
+# name: Deploy to stage
+# on:
+#     push:
+#         branches:
+#             - develop
+# jobs:
+#     deploy-to-stage:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - uses: actions/checkout@v4
+#             - uses: webfactory/ssh-agent@v0.9.0
+#               with:
+#                   ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#             - run: 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+#             - run: 'composer -V'
+#             - run: 'php -v'
+#             - run: ssh mateuszr84@mateuszr84.atthost24.pl -p 6022 \
+#             - run: 'echo "im on server"'
