@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Gallery
+
+# Model Form Field configuration
+form: $/studiodevs/gallery/models/gallery/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Gallery\Models\Gallery
+
+# Default redirect location
+defaultRedirect: studiodevs/gallery/galleries
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/gallery/galleries/update/:id
+    redirectClose: studiodevs/gallery/galleries
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/gallery/galleries
+    redirectClose: studiodevs/gallery/galleries
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

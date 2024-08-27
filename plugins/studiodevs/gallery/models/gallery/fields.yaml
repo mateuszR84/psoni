@@ -1,0 +1,36 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    published:
+        label: Opublikowany
+        span: left
+        type: checkbox
+    title:
+        label: Tytuł
+        type: text
+        span: left
+    slug:
+        label: Slug
+        span: right
+        preset:
+            field: title
+            type: slug
+    featured_image:
+        label: Zdjęcie wyróżniające
+        type: fileupload
+    images:
+        label: Dodaj zdjęcia
+        type: fileupload
+    description:
+        label: Dodaj krótki opis
+        type: richeditor
+        size: small
+        span: full
+
+    categories:
+        label: Wybierz kategorię
+        type: relation
+        nameFrom: title

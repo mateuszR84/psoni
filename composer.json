@@ -10,7 +10,6 @@
         "laravel/framework": "^9.0",
         "october/all": "^3.6",
         "rainlab/blog-plugin": "^1.7",
-        "sqwk/gallery-plugin": "^1.1",
         "skynettechnologies/allinoneaccessibility-plugin": "^1.0",
         "rainlab/translate-plugin": "^2.2"
     },

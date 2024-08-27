@@ -1,0 +1,11 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: studiodevs.gallery::lang.gallery.title
+        searchable: false
+    galleries_count:
+        label: studiodevs.gallery::lang.gallery.title
+        searchable: false

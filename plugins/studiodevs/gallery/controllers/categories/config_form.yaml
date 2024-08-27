@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/studiodevs/gallery/models/category/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Gallery\Models\Category
+
+# Default redirect location
+defaultRedirect: studiodevs/gallery/categories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/gallery/categories/update/:id
+    redirectClose: studiodevs/gallery/categories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/gallery/categories
+    redirectClose: studiodevs/gallery/categories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: studiodevs.gallery::lang.gallery.title
+        span: left
+
+    slug:
+        label: studiodevs.gallery::lang.gallery.slug
+        span: right
+        preset: title
+
+    description:
+        label: studiodevs.gallery::lang.gallery.description
+        size: large
+        span: full
+        type: textarea
