@@ -7,8 +7,8 @@ jobs:
     deploy-to-stage:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: webfactory/ssh-agent@v0.7.0
+            - uses: actions/checkout@v4
+            - uses: webfactory/ssh-agent@v0.9.0
               with:
                   ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
             - run: 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
@@ -20,7 +20,7 @@ jobs:
                     /home/mateuszr84/bin/deploy_scripts/phenomenon/scripts/new-release.sh \
                       "Psoni stage" \
                       "/home/mateuszr84/websites/testing/test.psoni-staszow.pl" \
-                      "${ secrets.LICENSE_KEY }" \
+                      "${{ secrets.LICENSE_KEY }}" \
                       "git@github.com:mateuszR84/psoni.git" \
                       "develop" \
                       "/home/mateuszr84/websites/testing/test.psoni-staszow.pl/linked" \
