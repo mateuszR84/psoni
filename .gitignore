@@ -60,6 +60,7 @@ node_modules/
 # ----------------------------------------------------------
 
 # Misc
+!.github
 !.gitignore
 !.editorconfig
 !composer.json
