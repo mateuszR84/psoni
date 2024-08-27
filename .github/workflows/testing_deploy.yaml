@@ -15,7 +15,7 @@ jobs:
             - run: 'composer -V'
             - run: 'php -v'
             - run: |
-                  ssh mateuszr84@atthost24.pl -p 6022 \
+                  ssh mateuszr84@mateuszr84.atthost24.pl -p 6022 \
                   ' \
                     /home/mateuszr84/bin/deploy_scripts/phenomenon/scripts/new-release.sh \
                       "Psoni stage" \
