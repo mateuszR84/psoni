@@ -35,7 +35,7 @@ class Gallery extends Model
         'categories' => [
             Category::class,
             'table' => 'studiodevs_gallery_galleries_categories',
-            'order' => 'name'
+            'order' => 'title'
         ]
     ];
 

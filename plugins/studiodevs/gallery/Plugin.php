@@ -44,10 +44,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'StudioDevs\Gallery\Components\MyComponent' => 'myComponent',
+            // 'StudioDevs\Gallery\Components\Gallery' => 'galleryItem',
+            'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
         ];
     }
 

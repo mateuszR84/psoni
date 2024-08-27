@@ -6,6 +6,7 @@ columns:
     title:
         label: studiodevs.gallery::lang.gallery.title
         searchable: false
-    galleries_count:
-        label: studiodevs.gallery::lang.gallery.title
-        searchable: false
+    galleriesCount:
+        label: Galerie
+        relation: galleries
+        useRelationCount: true
