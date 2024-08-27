@@ -14,17 +14,5 @@ jobs:
             - run: 'echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
             - run: 'composer -V'
             - run: 'php -v'
-            - run: |
-                  ssh mateuszr84@mateuszr84.atthost24.pl -p 6022 \
-                  ' \
-                    /home/mateuszr84/bin/deploy_scripts/phenomenon-plugin/scripts/new-release.sh \
-                      "Psoni stage" \
-                      "/home/mateuszr84/websites/testing/test.psoni-staszow.pl" \
-                      "${{ secrets.LICENSE_KEY }}" \
-                      "git@github.com:mateuszR84/psoni.git" \
-                      "develop" \
-                      "/home/mateuszr84/websites/testing/test.psoni-staszow.pl/linked" \
-                      "storage|.env|.htaccess" \
-                      "https://github.com/help" \
-                      "3.6" \
-                  '
+            - run: ssh mateuszr84@mateuszr84.atthost24.pl -p 6022 \
+            - run: 'echo "im on server"'
