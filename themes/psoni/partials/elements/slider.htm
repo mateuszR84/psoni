@@ -1,0 +1,85 @@
+<!-- Carousel wrapper -->
+<div id="homepageSlider" data-bs-carousel-init class="carousel slide carousel-fade" data-bts-ride="carousel" >
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button data-bs-button-init
+      type="button"
+      data-bs-target="#homepageSlider"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1">
+    </button>
+    <button data-bs-button-init
+      type="button"
+      data-bs-target="#homepageSlider"
+      data-bs-slide-to="1"
+      aria-label="Slide 2">
+    </button>
+    <button data-bs-button-init
+      type="button"
+      data-bs-target="#homepageSlider"
+      data-bs-slide-to="2"
+      aria-label="Slide 3">
+      </button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <img src="{{ 'assets/img/main/slider/baner1a.jpg'|theme }}" class="d-block w-100 object-fit-cover" alt="slide-1" />
+      <div class="carousel-caption d-none d-md-block">
+        <div>
+            <h2 class="text-center">Wesprzyj Nas!</h2>
+            <img src="{{ 'assets/img/main/prct.png'|theme }}" alt="1,5% podatku" class="my-4">
+            <h3 class="text-center">Przekaż 1,5% swojego podatku na Polskie Stowarzyszenie<br> na rzecz Osób z Niepełnosprawnością Intelektualną Koło w Staszowie</h3>
+            <h2 class="krs pt-2 fw-bold fs-1">KRS 0000340730</h2>
+            <a href="https://www.e-pity.pl/pity-2023/akcja-e-life-jeden-procent-2024-KRS-0000340730--https:/www.e-pity.pl/oppimg/f3ab32ba13ceecb7d317c41a22686654--http:/psoni-staszow.pl">
+                    <button class="btn btn-warning btn-krs text-uppercase">Przekaż</button>
+                </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="{{ 'assets/img/main/slider/baner1.jpg'|theme }}" class="d-block w-100 object-fit-cover" alt="slider-2">
+      <div class="carousel-caption d-none d-md-block">
+        <div>
+            <h2 class="text-left mb-3">Zapewniamy kompleksowe wsparcie<br> dla osób z niepełnosprawnością intelektualną<br> na wszystkich etapach ich życia</h2>
+            <h2 class="text-left text-uppercase fw-bold">Edukacja, Terapia,<br> Rehabilitacja, Opieka</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <img src="{{ 'assets/img/main/slider/slide3.jpg'|theme }}" class="d-block w-100 object-fit-cover" alt="slider-3">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+
+  <!-- Controls -->
+  <button data-bs-button-init
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#homepageSlider"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Poprzedni</span>
+  </button>
+  <button data-bs-button-init
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#homepageSlider"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Następny</span>
+  </button>
+</div>
+<!-- Carousel wrapper -->
