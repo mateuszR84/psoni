@@ -1,0 +1,34 @@
+url = "/galeria/:category/:slug"
+layout = "gallery"
+title = "Galeria"
+
+[galleryItem]
+slug = "{{ :slug }}"
+category = "{{ :category }}"
+==
+<div class="title-border">
+    <h1 class="py-1 text-center text-uppercase">{{ galleryItem.gallery.title }}</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 my-5">
+            {% component 'galleryItem' %}
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        Galleria.loadTheme("https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/azur/galleria.azur.min.js");
+        Galleria.configure({
+            autoplay: 3000,
+            lightbox: true,
+            overlayBackground: '#4267B0',
+            pauseOnInteraction: true,
+            showCounter: true,
+            swipe: true,
+            imageCrop: false
+        })
+        Galleria.run('.gallery');
+    }());
+</script>

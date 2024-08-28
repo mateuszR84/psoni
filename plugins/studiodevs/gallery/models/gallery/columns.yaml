@@ -7,11 +7,19 @@ columns:
         label: Tytuł
         type: text
         span: left
+    categories:
+        label: Kategorie
+        relation: categories
+        span: left
+        valueFrom: slug
+    created_at:
+        label: Data utworzenia
+        type: datetime
+    imagesCount:
+        label: Zdjęcia
+        relation: images
+        useRelationCount: true
     published:
         label: Opublikowany
         span: left
         type: switch
-    created_at:
-        label: Data utworzenia
-        type: datetime
-        

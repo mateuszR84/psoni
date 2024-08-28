@@ -226,3 +226,12 @@ th {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.gallery {
+    width: 100%;
+    height: 75vh;
+}
+
+.gallery-icon {
+    color: #4267B0;
+}

@@ -1,0 +1,24 @@
+{% set gallery = __SELF__.gallery %}
+
+<div class="col-md-6 mb-4 jusify-content-between">
+    <i class="fa-solid fa-calendar"></i> {{ gallery.created_at|date('Y-m-d') }}
+    <a href="{{ __SELF__.getCategoryUrl(gallery.categories[0].slug) }}">
+        <i class="fa-solid fa-list"></i> {{ gallery.categories[0].slug }}
+    </a>
+</div>
+
+{% if gallery.images.count %}
+    <div class="gallery" id="gallery">
+        {% for image in gallery.images %}
+            <a href="{{ image.path }}">
+                <img
+                    src="{{ image.path }}"
+                    data-title="{{ image.title }}"
+                    data-description="{{ image.description }}"
+                />
+            </a>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>Brak obrazów w galerii</p>
+{% endif %}

@@ -45,7 +45,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            // 'StudioDevs\Gallery\Components\Gallery' => 'galleryItem',
+            'StudioDevs\Gallery\Components\GalleryItem' => 'galleryItem',
             'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
         ];
     }

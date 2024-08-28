@@ -24,6 +24,14 @@ return [
                 'is_published' => 'Tylko opublikowane',
                 'is_published_desc' => 'Wybierz, czy pokazać tylko opublikowane galerie',
             ]
+            ],
+        'gallery' => [
+            'properties' => [
+                'gallery_slug' => 'Alias galerii',
+                'gallery_slug_desc' => 'Wyszukuje post po nazwie aliasu',
+                'gallery_category' => 'Alias kategorii galerii',
+                'gallery_category_desc' => 'Kategoria galerii',
+            ]
         ]
     ]
 ];

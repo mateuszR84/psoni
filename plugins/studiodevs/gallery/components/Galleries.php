@@ -15,12 +15,13 @@ use StudioDevs\Gallery\Models\Category;
 class Galleries extends ComponentBase
 {
     public $galleries;
+    public $categorySlug;
     
     public function componentDetails()
     {
         return [
             'name' => 'Galleries Component',
-            'description' => 'No description provided yet...'
+            'description' => 'Lista galerii'
         ];
     }
 
@@ -56,6 +57,11 @@ class Galleries extends ComponentBase
                 'type'              => 'checkbox',
                 'default'           => true
             ],
+            'galleryPage' => [
+                'title'             => 'studiodevs.gallery::lang.components.galleries.properties.gallery_page',
+                'description'       => 'studiodevs.gallery::lang.components.galleries.properties.gallery_page_desc',
+                'type'              => 'text',
+            ],
         ];
     }
 
@@ -77,5 +83,7 @@ class Galleries extends ComponentBase
         $this->galleries = Gallery::with(['featured_image', 'images'])->whereHas('categories', function ($q) use ($categoryId) {
             $q->where('id', $categoryId);
         })->get();
+
+        $this->categorySlug = Category::where('id', $categoryId)->pluck('slug')->first();
     }
 }
