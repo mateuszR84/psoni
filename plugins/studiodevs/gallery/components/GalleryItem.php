@@ -48,8 +48,23 @@ class GalleryItem extends ComponentBase
         $this->gallery = Gallery::where('slug', $this->property('slug'))->first();
     }
 
-    public function getCategoryUrl(string $categorySlug)
+    public function getCategoryUrl(string $categorySlug = null)
     {
-        $slug = $categorySlug;
+        if (!$categorySlug) {
+            return url('/');
+        }
+
+        $redirectsArray = [
+            'psoni-galeria' => '/psoni/galeria',
+            'orew-galeria' => '/orew/galeria',
+            'nps-galeria' => '/nps/galeria',
+            'sds-galeria' => '/sds/galeria',
+            'kt-galeria' => '/kt/galeria',
+            'mt-galeria' => '/mt/galeria',
+            'wsm-galeria' => '/wsm/galeria',
+            'ord-galeria' => '/ord/galeria',
+        ];
+
+        return url($redirectsArray[$categorySlug]);
     }
 }

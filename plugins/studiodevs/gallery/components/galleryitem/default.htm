@@ -3,7 +3,7 @@
 <div class="col-md-6 mb-4 jusify-content-between">
     <i class="fa-solid fa-calendar"></i> {{ gallery.created_at|date('Y-m-d') }}
     <a href="{{ __SELF__.getCategoryUrl(gallery.categories[0].slug) }}">
-        <i class="fa-solid fa-list"></i> {{ gallery.categories[0].slug }}
+        <i class="fa-solid fa-list"></i> {{ gallery.categories[0].title }}
     </a>
 </div>
 
