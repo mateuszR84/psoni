@@ -8,6 +8,7 @@ fields:
         label: Opublikowany
         span: left
         type: checkbox
+        default: true
     title:
         label: Tytuł
         type: text

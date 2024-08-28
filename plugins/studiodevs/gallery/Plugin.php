@@ -28,7 +28,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        //
+        $this->registerConsoleCommand('seed.categories', \StudioDevs\Gallery\Console\SeedCategories::class);
     }
 
     /**

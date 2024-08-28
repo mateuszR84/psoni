@@ -70,7 +70,7 @@ class Galleries extends ComponentBase
         $options = [];
 
         foreach (Category::all() as $category) {
-            $options[$category->id] = $category->title;
+            $options[$category->slug] = $category->title;
         }
 
         return $options;
@@ -78,12 +78,13 @@ class Galleries extends ComponentBase
 
     public function onRun()
     {
-        $categoryId = $this->property('categoryFilter');
+        $categorySlug = $this->property('categoryFilter');
 
-        $this->galleries = Gallery::with(['featured_image', 'images'])->whereHas('categories', function ($q) use ($categoryId) {
-            $q->where('id', $categoryId);
+        $this->galleries = Gallery::with(['featured_image', 'images'])
+                                  ->whereHas('categories', function ($q) use ($categorySlug) {
+                                                $q->where('slug', $categorySlug);
         })->get();
 
-        $this->categorySlug = Category::where('id', $categoryId)->pluck('slug')->first();
+        $this->categorySlug = $categorySlug;
     }
 }
