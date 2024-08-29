@@ -14,6 +14,14 @@ a:hover {
     color: #4267B0;
 }
 
+a:visited {
+    color: #000;
+}
+
+li a:hover {
+    color: #4267B0;
+}
+
 /* Navigation */
 .dropdown:hover .dropdown-menu {
    display: block;
@@ -220,6 +228,17 @@ th {
 }
 .carousel-caption {
   margin-top: -40px;
+  position: absolute;
+  left: 0 !important;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption-left {
+  color: white;
+  margin-top: -40px;
+  margin-left: 250px;
   position: absolute;
   left: 0 !important;
   width: 100%;
