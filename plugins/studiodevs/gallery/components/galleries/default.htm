@@ -1,3 +1,14 @@
-<p>This is the default markup for component Galleries</p>
-
-<small>You can delete this file if you want</small>
+<div class="container mb-5">
+    <div class="row">
+        {% for gallery in __SELF__.galleries %}
+            <div class="col-lg-4 col-md-12 my-3 d-flex justify-content-between align-items-center">
+                <a href="{{ 'gallery-item'|page({ 'category': __SELF__.categorySlug, 'slug': gallery.slug }) }}">
+                    <img class="rounded-4" src="{{ gallery.featured_image.thumbUrl(250, 150, {mode: 'crop'}) }}" />
+                    <div>
+                        <h5>{{ gallery.title }}</h5>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

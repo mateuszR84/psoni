@@ -1,13 +1,22 @@
 url = "/kt/galeria"
 layout = "kt"
 title = "Galeria"
-==
 
+[galleryList]
+categoryFilter = "kt-galeria"
+galleriesPerPage = 12
+noGalleriesMessage = "Brak galerii"
+isPublished = 1
+==
 <div class="title-border">
-    <h1 class="py-1 text-center text-uppercase">Galeria</h1>
+    <h1 class="py-1 text-center">Galeria</h1>
 </div>
 <div class="container">
     <div class="row">
-
+        {% if galleryList.galleries.count %}
+            {% component 'galleryList' %}
+        {% else %}
+            <h4>Na tej stronie jeszcze nie ma galerii</h4>
+        {% endif %}
     </div>
 </div>

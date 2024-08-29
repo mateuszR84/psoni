@@ -28,7 +28,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        //
+        $this->registerConsoleCommand('seed.categories', \StudioDevs\Gallery\Console\SeedCategories::class);
     }
 
     /**
@@ -44,10 +44,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'StudioDevs\Gallery\Components\MyComponent' => 'myComponent',
+            'StudioDevs\Gallery\Components\GalleryItem' => 'galleryItem',
+            'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
         ];
     }
 

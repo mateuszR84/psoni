@@ -27,11 +27,11 @@ class Category extends Model
         'galleries' => ['Studiodevs\Gallery\Models\Gallery',
             'table' => 'studiodevs_gallery_galleries_categories',
             'order' => 'published_at desc',
-            'scope' => 'isPublished'
         ],
         'galleries_count' => ['Studiodevs\Gallery\Models\Gallery',
             'table' => 'studiodevs_gallery_galleries_categories',
             'count' => true
         ]
     ];
+
 }
