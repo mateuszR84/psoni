@@ -9,6 +9,15 @@ fields:
         span: left
         type: checkbox
         default: true
+    published_at:
+        label: Data opublikowania
+        type: datepicker
+        mode: date
+        span: left
+        trigger:
+            action: enable
+            field: published
+            condition: checked
     title:
         label: Tytuł
         type: text

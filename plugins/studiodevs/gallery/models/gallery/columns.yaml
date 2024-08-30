@@ -12,6 +12,9 @@ columns:
         relation: categories
         span: left
         valueFrom: slug
+    published_at:
+        label: Data publikacji
+        type: datetime
     created_at:
         label: Data utworzenia
         type: datetime

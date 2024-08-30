@@ -1,7 +1,9 @@
 {% set gallery = __SELF__.gallery %}
 
 <div class="col-md-6 mb-4 d-flex jusify-content-between align-items-center">
-    <p class="me-4 fw-bold"><i class="fa-solid fa-calendar me-1 gallery-icon"></i> {{ gallery.created_at|date('d/m/Y') }}</p>
+    {% if gallery.published_at %}
+        <p class="me-4 fw-bold"><i class="fa-solid fa-calendar me-1 gallery-icon"></i> {{ gallery.published_at|date('d/m/Y') }}</p>
+    {% endif %}
     <a href="{{ __SELF__.getCategoryUrl(gallery.categories[0].slug) }}">
         <p class="text-uppercase fst-italic"><i class="fa-solid fa-list me-1 gallery-icon"></i> {{ gallery.categories[0].title }}</p>
     </a>
