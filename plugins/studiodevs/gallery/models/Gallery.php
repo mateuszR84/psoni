@@ -1,6 +1,8 @@
 <?php namespace StudioDevs\Gallery\Models;
 
+use Lang;
 use Model;
+use ValidationException;
 use StudioDevs\Gallery\Models\Category;
 
 /**
@@ -46,4 +48,13 @@ class Gallery extends Model
     public $attachMany = [
         'images' => \System\Models\File::class,
     ];
+
+    public function afterValidate()
+    {
+        if ($this->published && !$this->published_at) {
+            throw new ValidationException([
+               'published_at' => Lang::get('studiodevs.gallery::lang.models.gallery.published_validation')
+            ]);
+        }
+    }
 }

@@ -2,6 +2,11 @@
 
 return [
     'menu_label' => 'Galeria',
+    'models' => [
+        'gallery' => [
+            'published_validation' => 'Ustaw datę publikacji galerii',
+        ]
+    ],
     'gallery' => [
         'galleries' => 'Lista galerii',
         'categories' => 'Kategorie',
@@ -23,6 +28,16 @@ return [
                 'no_galleries_message_default' => 'Brak galerii',
                 'is_published' => 'Tylko opublikowane',
                 'is_published_desc' => 'Wybierz, czy pokazać tylko opublikowane galerie',
+                'sort_by' => 'Sortuj po dacie:',
+                'sort_by_desc' => 'Wybierz po jakiej dacie sortować galerie',
+                'published_at' => 'Publikacji',
+                'created_at' => 'Utworzenia',
+                'published_at_desc' => 'Publikacji (malejąco)',
+                'published_at_asc' => 'Publikacji (rosnąco)',
+                'created_at_desc' => 'Utworzenia (malejąco)',
+                'created_at_asc' => 'Utworzenia (rosnąco)',
+                'gallery_page' => 'Strona galerii',
+                'gallery_page_desc' => 'Podaj URL strony, na której wyświetlana jest galeria',
             ]
             ],
         'gallery' => [

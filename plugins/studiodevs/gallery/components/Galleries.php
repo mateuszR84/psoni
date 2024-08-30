@@ -62,6 +62,12 @@ class Galleries extends ComponentBase
                 'description'       => 'studiodevs.gallery::lang.components.galleries.properties.gallery_page_desc',
                 'type'              => 'text',
             ],
+            'sortBy' => [
+                'title'             => 'studiodevs.gallery::lang.components.galleries.properties.sort_by',
+                'description'       => 'studiodevs.gallery::lang.components.galleries.properties.sort_by_desc',
+                'type'              => 'dropdown',
+                'default'           => 'published_at'
+            ],
         ];
     }
 
@@ -76,6 +82,16 @@ class Galleries extends ComponentBase
         return $options;
     }
 
+    function getSortByOptions(): array
+    {
+        return [
+            'published_at' => Lang::get('studiodevs.gallery::lang.components.galleries.properties.published_at_desc'),
+            // 'published_at_asc' => Lang::get('studiodevs.gallery::lang.components.galleries.properties.published_at_asc'),
+            'created_at' => Lang::get('studiodevs.gallery::lang.components.galleries.properties.created_at_desc'),
+            // 'created_at_asc' => Lang::get('studiodevs.gallery::lang.components.galleries.properties.created_at_asc'),
+        ];
+    }
+
     public function onRun()
     {
         $categorySlug = $this->property('categoryFilter');
@@ -83,7 +99,7 @@ class Galleries extends ComponentBase
         $this->galleries = Gallery::with(['featured_image', 'images'])
                                   ->whereHas('categories', function ($q) use ($categorySlug) {
                                                 $q->where('slug', $categorySlug);
-        })->get();
+                                  })->orderBy($this->property('sortBy'), 'desc')->get();
 
         $this->categorySlug = $categorySlug;
     }
