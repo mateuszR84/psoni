@@ -6,12 +6,13 @@
 {% if post.featured_images|length %}
     <div class="featured-images text-center">
         {% for image in post.featured_images %}
-            <p>
+            <p class="mt-4 text-start">
                 <img
                     data-src="{{ image.filename }}"
-                    src="{{ image.path }}"
+                    src="{{ image.thumbUrl(150, 150, {mode:'crop'}) }}"
                     alt="{{ image.description }}"
-                    style="max-width: 100%" />
+                    style="max-width: 100%"
+                />
             </p>
         {% endfor %}
     </div>
@@ -19,9 +20,10 @@
 
 <p class="info mt-4">
     {% if post.categories|length %}
-    <hr>
+        <hr />
         {% for category in post.categories %}
-            <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+            <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a
+            >{% if not loop.last %},{% endif %}
         {% endfor %}
     {% endif %}
     | data publikacji: {{ post.published_at|date('d-m-Y') }}
