@@ -5,9 +5,9 @@ namespace StudioDevs\Gallery\Console;
 use Illuminate\Console\Command;
 use StudioDevs\Gallery\Models\Category;
 
-class SeedCategories extends Command
+class SeedGalleryCategories extends Command
 {
-    protected $name = 'seed:categories';
+    protected $name = 'seed:gallery:categories';
     protected $description = 'Seed categories';
 
     public function handle()
