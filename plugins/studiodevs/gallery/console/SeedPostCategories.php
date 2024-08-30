@@ -17,75 +17,29 @@ class SeedPostCategories extends Command
 
     public function seedCategories()
     {
-        $psoni = new Category();
-        $psoni->title = 'OREW';
-        $psoni->slug = 'orew';
-        $psoni->save();
-        
-        $psoniPlacowka = new Category();
-        $psoniPlacowka->title = 'NPS';
-        $psoniPlacowka->slug = 'nps';
-        $psoniPlacowka->save();
+        $categories = [
+            'OREW' => 'orew',
+            'NPS' => 'nps',
+            'PSONI' => 'psoni',
+            'PSONI przetargi' => 'psoni-przetargi',
+            'PU' => 'projekt-unijny',
+            'PU osoby' => 'pu-osoby',
+            'PU rodzice' => 'pu-rodzice',
+            'PU przetargi' => 'pu-przetargi',
+            'PU rynek' => 'pu-rynek',
+            'MT' => 'mtr',
+            'KT' => 'kta',
+            'WSM' => 'wsm',
+            'ORD' => 'ord',
+            'SDS' => 'sds'
+        ];
 
-        $orew = new Category();
-        $orew->title = 'PSONI przetargi';
-        $orew->slug = 'psoni-przetargi';
-        $orew->save();
-
-        $nps = new Category();
-        $nps->title = 'PSONI';
-        $nps->slug = 'psoni';
-        $nps->save();
-
-        $sds = new Category();
-        $sds->title = 'PU';
-        $sds->slug = 'projekt-unijny';
-        $sds->save();
-
-        $mt = new Category();
-        $mt->title = 'PU osoby';
-        $mt->slug = 'pu-osoby';
-        $mt->save();
-        
-        $kt = new Category();
-        $kt->title = 'PU rodzice';
-        $kt->slug = 'pu-rodzice';
-        $kt->save();
-
-        $wsm = new Category();
-        $wsm->title = 'MT';
-        $wsm->slug = 'mieszkanie-treningowe';
-        $wsm->save();
-
-        $ord = new Category();
-        $ord->title = 'KT';
-        $ord->slug = 'klub';
-        $ord->save();
-
-        $wsm = new Category();
-        $wsm->title = 'WSM';
-        $wsm->slug = 'wsm';
-        $wsm->save();
-
-        $ord = new Category();
-        $ord->title = 'ORD';
-        $ord->slug = 'ord';
-        $ord->save();
-        
-        $przetargi = new Category();
-        $przetargi->title = 'PU przetargi';
-        $przetargi->slug = 'pu-przetargi';
-        $przetargi->save();
-
-        $rynek = new Category();
-        $rynek->title = 'PU rynek';
-        $rynek->slug = 'pu-rynek';
-        $rynek->save();
-
-        $sds1 = new Category();
-        $sds1->title = 'SDS';
-        $sds1->slug = 'sds';
-        $sds1->save();
+        foreach ($categories as $name => $slug) {
+            $category = new Category();
+            $category->name = $name;
+            $category->slug = $slug;
+            $category->save();
+        }
     }
 
 }
