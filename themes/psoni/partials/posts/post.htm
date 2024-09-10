@@ -28,12 +28,12 @@
 {% endif %}
 
 <p class="info mt-4">
-    {% if post.categories|length %}
         <hr />
+    {# {% if post.categories|length %}
         {% for category in post.categories %}
-            <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a
+            <a href="{{ ''|page({slug: category.slug}) }}">{{ category.name }}</a
             >{% if not loop.last %},{% endif %}
         {% endfor %}
-    {% endif %}
+    {% endif %} #}
     | data publikacji: {{ post.published_at|date('d-m-Y') }}
 </p>
