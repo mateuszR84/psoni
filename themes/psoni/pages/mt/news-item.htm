@@ -1,0 +1,24 @@
+url = "/mt/:category/:slug"
+layout = "kt"
+title = "Pojedynczy wpis"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "category"
+==
+<?php
+function onEnd()
+{
+    if (isset($this->post)) {
+        $this->page->title = $this->post->title;
+    }
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="mt-4 mb-5">
+            {% partial 'posts/post' post = post %}
+        </div>
+    </div>
+</div>
