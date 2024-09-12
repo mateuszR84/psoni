@@ -10,16 +10,16 @@ h1 {
 }
 
 a:link {
-    color: #000;
+    color: #4267B0;
     text-decoration: none;
 }
 
 a:hover {
-    color: #4267B0;
+    color: #000;
 }
 
 a:visited {
-    color: #000;
+    color: #213458;
 }
 
 li a:hover {
