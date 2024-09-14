@@ -1,0 +1,32 @@
+{% set donors = __SELF__.donors %}
+{% set active = __SELF__.active %}
+
+<ul class="nav nav-tabs" id="donors" role="tablist">
+    {% for donor in donors %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if donor.year == active %} active {% endif %}" 
+                    id="{{ donor.year }}-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#{{ donor.year }}" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="{{ donor.year }}" 
+                    aria-selected="">
+            {{ donor.year }}</button>
+        </li>
+    {% endfor %}
+</ul>
+<div class="tab-content" id="donorsContent">
+    {% for donor in donors %}
+        <div class="tab-pane fade {% if donor.year == active %}show active{% endif %} mt-4 mb-4" 
+             id="{{ donor.year }}" 
+             role="tabpanel" 
+             aria-labelledby="{{ donor.year }}-tab">
+            <ul>
+                {% for donor in donor.donors %}
+                    <li>{{ donor.donor }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
