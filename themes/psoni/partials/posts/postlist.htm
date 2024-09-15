@@ -1,11 +1,10 @@
 {% set posts = posts %}
 {% set pageName = parent ~ '/news-item' %}
-{{ dump(parent) }}
 
 <ul class="post-list">
     {% for post in posts %}
     {% set category = post.categories|first %}
-    <a href={{  pageName|page({category: category.slug, slug: post.slug}) }}>
+    <a href={{  postPage|page({category: category.slug, slug: post.slug}) }}>
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
                 {% if post.featured_images.count %}
