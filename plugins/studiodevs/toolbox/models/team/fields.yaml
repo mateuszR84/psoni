@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: Wybierz placówkę
+        type: dropdown
+        span: left
+    team:
+        label: Stanowisko
+        type: repeater
+        prompt: Dodaj stanowisko
+        itemsExpanded: false
+        form:
+            fields:
+                position:
+                    label: Nazwa stanowiska
+                    type: text
+                    span: left
+                persons:
+                    label: Pracownicy na tym stanowisku
+                    type: repeater
+                    prompt: Dodaj kolejnego pracownika
+                    form:
+                        fields:
+                            person:
+                                label: Dane osobowe  
+                                type: text
+                            
+

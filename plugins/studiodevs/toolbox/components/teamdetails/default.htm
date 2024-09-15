@@ -1,0 +1,9 @@
+{% set team = __SELF__.team.team %}
+{% for position in team %}
+    <p><strong>{{ position.position }}: </strong></p>
+    <ul>
+        {% for person in position.persons  %}
+            <li>{{ person.person }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

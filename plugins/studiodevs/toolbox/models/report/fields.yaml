@@ -1,0 +1,40 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    year: 
+        label: Rok
+        type: text
+        span: left
+    substantive:
+        label: Sprawozdanie merytoryczne
+        type: text
+        span: left
+        comment: Podaj link do sprawozdania
+    financial:
+        label: Sprawozdanie finansowe
+        type: text
+        span: right
+        comment: Podaj link do sprawozdania
+    additional_fields:
+        label: Dodatkowe pola
+        type: nestedform
+        commentAbove: Pola opcjonalne
+        form:
+            fields:
+                balance:
+                    label: Bilans 
+                    type: text
+                    span: left
+                additional:
+                    label: Informacja dodatkowa 
+                    type: text
+                    span: right
+                profit_loss:
+                    label: Rachunek zysków i strat 
+                    type: text
+                    span: left
+
+                
+

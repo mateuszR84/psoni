@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Report
+
+# Model Form Field configuration
+form: $/studiodevs/toolbox/models/report/fields.yaml
+
+# Model Class name
+modelClass: Studiodevs\Toolbox\Models\Report
+
+# Default redirect location
+defaultRedirect: studiodevs/toolbox/reports
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/toolbox/reports/update/:id
+    redirectClose: studiodevs/toolbox/reports
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/toolbox/reports
+    redirectClose: studiodevs/toolbox/reports
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
