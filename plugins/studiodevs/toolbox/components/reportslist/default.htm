@@ -1,0 +1,41 @@
+{% set reports = __SELF__.reports %}
+{% set active = __SELF__.active %}
+
+<ul class="nav nav-tabs" id="reports" role="tablist">
+    {% for report in reports %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if report.year == active %} active {% endif %}" 
+                    id="{{ report.year }}-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#{{ report.year }}" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="{{ report.year }}" 
+                    aria-selected="">
+            {{ report.year }}</button>
+        </li>
+    {% endfor %}
+</ul>
+<div class="tab-content" id="reportsContent">
+    {% for report in reports %}
+        <div class="tab-pane fade {% if report.year == active %}show active{% endif %} text-center mt-4 mb-4" 
+             id="{{ report.year }}" 
+             role="tabpanel" 
+             aria-labelledby="{{ report.year }}-tab">
+                <h3 class="text-center">Sprawozdanie finansowe za okres 01 stycznia {{ report.year }} do 31 grudnia {{ report.year }}</h3>
+                <ul style='list-style-type: none;'>
+                    <a href="{{ report.substantive }}"><li class="mt-4 mb-4">Sprawozdanie merytoryczne {{ report.year }}</li></a>
+                    <a href="{{ report.financial }}"><li class="mb-4">Sprawozdanie finansowe {{ report.year }}</li></a>
+                {% if report.additional_fields.balance %}
+                    <a href="{{ report.additional_fields.balance }}"><li class="mt-4 mb-4">Bilans</li></a>
+                {% endif %}
+                {% if report.additional_fields.additional %}
+                    <a href="{{ report.additional_fields.additional }}"><li class="mt-4 mb-4">Informacja dodatkowa</li></a>
+                {% endif %}
+                {% if report.additional_fields.profit_loss %}
+                    <a href="{{ report.additional_fields.profit_loss }}"><li class="mt-4 mb-4">Rachunek zysków i strat</li></a>
+                {% endif %}
+                </ul>
+        </div>
+    {% endfor %}
+</div>

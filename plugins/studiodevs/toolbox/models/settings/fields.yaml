@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    _unsigned_categories:
+        label: Nieprzypisane kategorie
+        type: partial
+        path: ~/plugins/studiodevs/toolbox/models/settings/_unsigned_categories.php
+    post_category_pages:  
+        label: Strony kategorii postów
+        type: repeater
+        form:
+            fields:
+                category_slug:
+                    label: Alias kategorii
+                    type: text
+                    span: left
+                category_page:
+                    label: Strona kategorii
+                    type: dropdown
+                    span: right

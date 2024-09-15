@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    year:
+        label: Rok
+        type: text
+        span: left
+    donors:
+        label: Darczyńcy
+        type: repeater
+        prompt: Dodaj darczyńcę
+        form:
+            fields:
+                donor: 
+                    label: Darczyńca
+                    type: text
+                

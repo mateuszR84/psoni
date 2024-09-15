@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Donor
+
+# Model Form Field configuration
+form: $/studiodevs/toolbox/models/donor/fields.yaml
+
+# Model Class name
+modelClass: Studiodevs\Toolbox\Models\Donor
+
+# Default redirect location
+defaultRedirect: studiodevs/toolbox/donors
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/toolbox/donors/update/:id
+    redirectClose: studiodevs/toolbox/donors
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/toolbox/donors
+    redirectClose: studiodevs/toolbox/donors
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

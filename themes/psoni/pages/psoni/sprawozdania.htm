@@ -1,71 +1,15 @@
 url = "/psoni/sprawozdania"
 layout = "psoni"
 title = "Sprawozdania"
+
+[reports]
+active = 2023
 ==
 <div class="title-border">
     <h1 class="py-1 text-center mb-2">Sprawozdania</h1>
 </div>
-<div class="container mt-2">
+<div class="container my-5">
     <div class="row">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#2023" type="button" role="tab" aria-controls="2023" aria-selected="true">2023</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#2022" type="button" role="tab" aria-controls="2022" aria-selected="true">2022</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#2021" type="button" role="tab" aria-controls="2021" aria-selected="false">2021</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#2020" type="button" role="tab" aria-controls="2020" aria-selected="false">2020</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#2019" type="button" role="tab" aria-controls="2019" aria-selected="true">2019</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#2018" type="button" role="tab" aria-controls="2018" aria-selected="false">2018</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#2017" type="button" role="tab" aria-controls="2017" aria-selected="false">2017</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#2016" type="button" role="tab" aria-controls="2016" aria-selected="false">2016</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active text-center mt-5 mb-4" id="2023" role="tabpanel" aria-labelledby="home-tab">
-                <h3 class="text-center">Sprawozdanie finansowe za okres 01 stycznia 2023 do 31 grudnia 2023</h3>
-                <ul style='list-style-type: none;'>
-                    <a href=""><li class="mt-5 mb-4">Sprawozdanie merytoryczne 2023</li></a>
-                    <a href=""><li class="mb-4">Sprawozdanie finansowe 2023</li></a>
-                </ul>
-            </div>
-            <div class="tab-pane fade text-center mt-5 mb-4" id="2022" role="tabpanel" aria-labelledby="home-tab">
-                <h3 class="text-center">Sprawozdanie finansowe za okres 01 stycznia 2022 do 31 grudnia 2022</h3>
-                <ul style='list-style-type: none;'>
-                    <a href=""><li class="mt-5 mb-4">Sprawozdanie merytoryczne 2022</li></a>
-                    <a href=""><li class="mb-4">Sprawozdanie finansowe 2022</li></a>
-                </ul>
-            </div>
-            <div class="tab-pane fade mt-3 mb-4 text-center" id="2021" role="tabpanel" aria-labelledby="profile-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2021 do 31 grudnia 2021</h3>
-            </div>
-            <div class="tab-pane fade mb-4 mt-3 text-center" id="2020" role="tabpanel" aria-labelledby="contact-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2020 do 31 grudnia 2020</h3>
-            </div>
-            <div class="tab-pane fade mt-3 mb-4 text-center" id="2019" role="tabpanel" aria-labelledby="profile-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2019 do 31 grudnia 2019</h3>
-            </div>
-            <div class="tab-pane fade mb-4 mt-3 text-center" id="2018" role="tabpanel" aria-labelledby="contact-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2018 do 31 grudnia 2018</h3>
-            </div>
-            <div class="tab-pane fade mt-3 mb-4 text-center" id="2017" role="tabpanel" aria-labelledby="profile-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2017 do 31 grudnia 2017</h3>
-            </div>
-            <div class="tab-pane fade mb-4 mt-3 text-center" id="2016" role="tabpanel" aria-labelledby="contact-tab">
-                <h3>Sprawozdanie finansowe za okres 01 stycznia 2016 do 31 grudnia 2016</h3>
-            </div>
-        </div>
+        {% component 'reports' %}
     </div>
 </div>

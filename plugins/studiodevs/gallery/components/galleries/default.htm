@@ -1,10 +1,10 @@
 <div class="container mb-5">
     <div class="row">
         {% for gallery in __SELF__.galleries %}
-            <div class="col-lg-4 col-md-12 my-3 d-flex justify-content-between align-items-center">
+            <div class="col-lg-4 col-md-12 my-3">
                 <a href="{{ 'gallery-item'|page({ 'category': __SELF__.categorySlug, 'slug': gallery.slug }) }}">
-                    <img class="rounded-4" src="{{ gallery.featured_image.thumbUrl(250, 150, {mode: 'crop'}) }}" />
-                    <div class="mt-2 text-center">
+                    <img class="rounded-4 mx-auto d-block" src="{{ gallery.featured_image.thumbUrl(250, 150, {mode: 'crop'}) }}" />
+                    <div class="mt-3 text-center">
                         <h5>{{ gallery.title }}</h5>
                     </div>
                 </a>

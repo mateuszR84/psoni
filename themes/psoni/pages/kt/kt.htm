@@ -8,7 +8,7 @@ categoryFilter = "kta"
 postsPerPage = 10
 noPostsMessage = "Brak aktualności"
 sortOrder = "published_at desc"
-categoryPage = "home"
+categoryPage = "kt/news-item"
 postPage = "kt/news-item"
 ==
 <div class="title-border">
@@ -16,6 +16,6 @@ postPage = "kt/news-item"
 </div>
 <div class="container">
     <div class="mt-4 mb-5">
-        {% partial 'posts/postlist' posts=posts name='kt' %}
+        {% partial 'posts/postlist' posts=posts %}
     </div>
 </div>
