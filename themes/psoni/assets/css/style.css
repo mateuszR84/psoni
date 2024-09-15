@@ -10,19 +10,10 @@ h1 {
 }
 
 a:link {
-    color: #4267B0;
     text-decoration: none;
 }
 
 a:hover {
-    color: #000;
-}
-
-a:visited {
-    color: #213458;
-}
-
-li a:hover {
     color: #4267B0;
 }
 
@@ -30,6 +21,10 @@ li a:hover {
 .dropdown:hover .dropdown-menu {
    display: block;
    margin-top: 0;
+}
+
+.dropdown-item a {
+    color: #000;
 }
 
 .nav-item.dropdown .dropdown-item:active {
