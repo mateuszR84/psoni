@@ -29,7 +29,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        //
+        $this->registerConsoleCommand('seed.post.categories.pages', \StudioDevs\Toolbox\Console\SeedPostCategoriesPages::class);
     }
 
     /**
