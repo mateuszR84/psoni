@@ -262,3 +262,13 @@ th {
 .ord-wsparcie {
     list-style-type: none;
 }
+
+/* photoswipe */
+.pswp__caption__center {text-align: center;}
+figure {
+display: inline-block;
+width: 33.333%;
+float: left;
+}
+.spacer {height: 5em;}
+/* img {width: 100%;} */

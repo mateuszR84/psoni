@@ -50,6 +50,14 @@ class Plugin extends PluginBase
             'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
         ];
     }
+    
+    public function registerPageSnippets()
+    {
+        return [
+            'StudioDevs\Gallery\Components\GallerySnippet' => 'gallerySnippet',
+        ];
+    }
+
 
     /**
      * registerPermissions used by the backend.
