@@ -1,0 +1,15 @@
+{% set gallery = __SELF__.galleryItem %}
+
+{% if gallery.images.count %}
+    <div class="gallery" id="gallery">
+        {% for image in gallery.images %}
+            <a href="{{ image.path }}">
+                <img
+                    src="{{ image.path }}"
+                    data-title="{{ image.title }}"
+                    data-description="{{ image.description }}"
+                />
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

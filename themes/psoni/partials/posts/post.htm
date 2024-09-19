@@ -1,7 +1,7 @@
 {% set post = post %}
 
 <h3 class="py-1 mb-5 text-center">{{ post.title }}</h3>
-<div class="mt-1 content">{{ post.content|raw }}</div>
+<div class="mt-1 content">{{ post.content|content }}</div>
 
 {% if post.featured_images|length %}
     <div class="featured-images text-center">
