@@ -1,7 +1,21 @@
 {% set post = post %}
 
-<h3 class="py-1 mb-5 text-center">{{ post.title }}</h3>
-<div class="mt-1 content">{{ post.content|content }}</div>
+<div class="mb-5">
+    <h3 class="py-1">{{ post.title }}</h3>
+    <hr>
+    <p class="info mt-4">
+        <span class="text-muted me-4">{{ post.published_at|date('j F Y') }}</span>
+        {% if post.categories|length %}
+            <span class="category">
+                {% for category in post.categories %}
+                    <a href="{{ getCategoryPage(category.slug)|page }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </span>
+        {% endif %}
+    </p>
+</div>
+
+<class="mt-1 content">{{ post.content|content }}</div>
 
 {% if post.featured_images|length %}
     <div class="featured-images text-center">
@@ -17,13 +31,3 @@
         {% endfor %}
     </div>
 {% endif %}
-
-<p class="info mt-4">
-    {% if post.categories|length %}
-    <hr>
-        {% for category in post.categories %}
-            <a href="{{ getCategoryPage(category.slug)|page }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-        {% endfor %}
-    {% endif %}
-    | data publikacji: {{ post.published_at|date('d-m-Y') }}
-</p>
