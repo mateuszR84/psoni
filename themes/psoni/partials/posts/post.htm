@@ -1,17 +1,18 @@
 {% set post = post %}
 
 <h3 class="py-1 mb-5 text-center">{{ post.title }}</h3>
-<div class="mt-1 content">{{ post.content|raw }}</div>
+<div class="mt-1 content">{{ post.content|content }}</div>
 
 {% if post.featured_images|length %}
     <div class="featured-images text-center">
         {% for image in post.featured_images %}
-            <p>
+            <p class="mt-4 text-start">
                 <img
                     data-src="{{ image.filename }}"
-                    src="{{ image.path }}"
+                    src="{{ image.thumbUrl(150, 150, {mode:'crop'}) }}"
                     alt="{{ image.description }}"
-                    style="max-width: 100%" />
+                    style="max-width: 100%"
+                />
             </p>
         {% endfor %}
     </div>
@@ -21,7 +22,7 @@
     {% if post.categories|length %}
     <hr>
         {% for category in post.categories %}
-            <a href="{{ 'category'|page({slug: category.slug}) }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+            <a href="{{ getCategoryPage(category.slug)|page }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
         {% endfor %}
     {% endif %}
     | data publikacji: {{ post.published_at|date('d-m-Y') }}

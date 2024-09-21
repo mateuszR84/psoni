@@ -1,6 +1,7 @@
 <?php namespace Studiodevs\Toolbox;
 
 use Backend;
+use Studiodevs\Toolbox\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -28,7 +29,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        //
+        $this->registerConsoleCommand('seed.post.categories.pages', \StudioDevs\Toolbox\Console\SeedPostCategoriesPages::class);
     }
 
     /**
@@ -99,4 +100,28 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function registerSettings()
+    {
+        return [
+            'toolbox' => [
+                'label' => 'Toolbox',
+                'description' => 'Personalizacja projektu',
+                'category' => 'Studiodevs',
+                'icon' => 'icon-wrench',
+                'class' => 'Studiodevs\Toolbox\Models\Settings',
+                'order' => 100,
+            ],
+        ];
+    }
+    
+    public function registerMarkupTags()
+    {
+        return [
+            'functions' => [
+                'getCategoryPage' => [Settings::class, 'getCategoryPage'],
+            ]
+        ];
+    }
+
 }

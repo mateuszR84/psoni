@@ -2,6 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use StudioDevs\Gallery\Classes\TwigHelpers;
 
 /**
  * Plugin Information File
@@ -50,6 +51,14 @@ class Plugin extends PluginBase
             'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
         ];
     }
+    
+    public function registerPageSnippets()
+    {
+        return [
+            'StudioDevs\Gallery\Components\GallerySnippet' => 'gallerySnippet',
+        ];
+    }
+
 
     /**
      * registerPermissions used by the backend.
@@ -99,4 +108,16 @@ class Plugin extends PluginBase
             ],
         ];
     }
+    
+    public function registerMarkupTags()
+    {
+        return [
+            'functions' => [
+                // 'getPageFromCategory' => [TwigHelpers::class, 'getPageFromCategory'],
+                // 'parentTitle' => [TwigHelpers::class, 'getPageNameFromCategory'],
+            ]
+        ];
+    }
+
+
 }
