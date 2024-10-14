@@ -5,6 +5,14 @@ title = "Placówka w Kurozwękach"
 [gallerySnippet]
 slug = "budowa-placowka"
 displayMode = "photoswipe"
+
+[gallerySnippet podpisanieUmowy]
+slug = "budowa-placowka-podpisanie"
+displayMode = "photoswipe"
+
+[gallerySnippet startBudowy]
+slug = "budowa-placowka-start"
+displayMode = "photoswipe"
 ==
 <div class="title-border">
     <h1 class="py-1 text-center">Placówka w Kurozwękach</h1>
@@ -28,6 +36,14 @@ displayMode = "photoswipe"
             <img class="mb-2 mx-auto d-block" src="{{ 'assets/img/placowka/3.jpg' | theme }}" alt="wizualizacja-3">
             <img class="mb-2 mx-auto d-block" src="{{ 'assets/img/placowka/4.jpg' | theme }}" alt="wizualizacja-4">
             <img class="mb-2 mx-auto d-block" src="{{ 'assets/img/placowka/5.jpg' | theme }}" alt="wizualizacja-5">
+        </div>
+        <div>
+            <h4 class="text-center my-3">Podpisanie umowy</h4>
+            {% component 'podpisanieUmowy' %}
+        </div>
+        <div>
+            <h4 class="text-center my-3">Uroczyste rozpoczęcie budowy</h4>
+            {% component 'startBudowy' %}
         </div>
         <div>
             <h4 class="text-center my-3">Etapy budowy</h4>
