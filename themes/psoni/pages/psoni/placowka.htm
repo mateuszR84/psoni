@@ -1,8 +1,11 @@
 url = "/psoni/placowka"
-title = "Placówka w Kurozwękach"
 layout = "psoni"
-==
+title = "Placówka w Kurozwękach"
 
+[gallerySnippet]
+slug = "budowa-placowka"
+displayMode = "photoswipe"
+==
 <div class="title-border">
     <h1 class="py-1 text-center">Placówka w Kurozwękach</h1>
 </div>
@@ -26,5 +29,6 @@ layout = "psoni"
             <img class="mb-2 mx-auto d-block" src="{{ 'assets/img/placowka/4.jpg' | theme }}" alt="wizualizacja-4">
             <img class="mb-2 mx-auto d-block" src="{{ 'assets/img/placowka/5.jpg' | theme }}" alt="wizualizacja-5">
         </div>
+        {% component 'gallerySnippet' %}
     </div>
 </div>

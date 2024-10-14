@@ -49,6 +49,7 @@ class Plugin extends PluginBase
         return [
             'StudioDevs\Gallery\Components\GalleryItem' => 'galleryItem',
             'StudioDevs\Gallery\Components\Galleries' => 'galleryList',
+            'StudioDevs\Gallery\Components\GallerySnippet' => 'gallerySnippet',
         ];
     }
     

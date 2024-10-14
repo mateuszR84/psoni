@@ -42,12 +42,12 @@ class GallerySnippet extends GalleryItem
         ];
     }
 
-    public function getDisplayModeOptions() :array 
+    public function getDisplayModeOptions() :array
     {
         return [
             'galleria' => 'Slider',
             'photoswipe' => 'Pojedyncze zdjęcia'
-        ];        
+        ];
     }
 
     public function onRun()
@@ -60,7 +60,7 @@ class GallerySnippet extends GalleryItem
             $this->addJs('assets/js/photoswipe.js');
         }
 
-        $galleryItem = Gallery::where('slug', $this->property('slug'))->first();        
+        $galleryItem = Gallery::where('slug', $this->property('slug'))->first();
         $this->galleryItem = $galleryItem;
     }
 
