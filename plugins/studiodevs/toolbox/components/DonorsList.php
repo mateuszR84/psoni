@@ -39,7 +39,7 @@ class DonorsList extends ComponentBase
 
     public function onRun()
     {
-        $this->donors = Donor::orderBy('created_at', 'desc')->get();
+        $this->donors = Donor::orderBy('year', 'desc')->get();
         $this->active = $this->property('active');
     }
 }
