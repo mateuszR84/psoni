@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Tytuł
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: right
+        type: text
+        preset: title
+        readOnly: true
+    project:
+        label: Projekt
+        span: left
+        type: dropdown
+        default: wsm
+    image:
+        label: Tablica
+        type: fileupload
+        span: right
+
