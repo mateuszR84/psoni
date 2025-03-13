@@ -47,6 +47,8 @@ class Plugin extends PluginBase
     {
         return [
             'Studiodevs\Toolbox\Components\ReportsList' => 'reports',
+            'Studiodevs\Toolbox\Components\DashboardsList' => 'dashboardsList',
+            'Studiodevs\Toolbox\Components\DashboardItem' => 'dashboardItem',
             'Studiodevs\Toolbox\Components\DonorsList' => 'donors',
             'Studiodevs\Toolbox\Components\TeamDetails' => 'team',
         ];
@@ -95,6 +97,11 @@ class Plugin extends PluginBase
                         'label'       => 'Kadra',
                         'icon'        => 'icon-user',
                         'url'         => Backend::url('studiodevs/toolbox/teams'),
+                    ],
+                    'dashboards' => [
+                        'label'       => 'Tablice informacyjne',
+                        'icon'        => 'icon-object-group',
+                        'url'         => Backend::url('studiodevs/toolbox/dashboards'),
                     ],
                 ]
             ],

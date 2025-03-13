@@ -1,10 +1,12 @@
-url = "/wsm/tablica"
+url = "/wsm/tablica/:slug"
 layout = "wsm"
 title = "Tablica informacyjna"
+
+[dashboardItem]
+slug = "{{ :slug }}"
 ==
 <div class="container">
     <div class="row mb-3 mt-3">
-        <img src="{{ 'assets/img/wsm/tablica.jpg' | theme }}"
-                alt="logo-pfron">
+        {% component 'dashboardItem' %}    
     </div>
 </div>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Dashboard
+
+# Model Form Field configuration
+form: $/studiodevs/toolbox/models/dashboard/fields.yaml
+
+# Model Class name
+modelClass: Studiodevs\Toolbox\Models\Dashboard
+
+# Default redirect location
+defaultRedirect: studiodevs/toolbox/dashboards
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/toolbox/dashboards/update/:id
+    redirectClose: studiodevs/toolbox/dashboards
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/toolbox/dashboards
+    redirectClose: studiodevs/toolbox/dashboards
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
