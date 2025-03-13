@@ -20,9 +20,8 @@ jobs:
                   host: ${{ secrets.HOST }}
                   username: ${{ secrets.USERNAME }}
                   port: ${{ secrets.PORT }}
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  password: ${{ secrets.PASSWORD }}
                   script: |
                     cd /home/${{ secrets.USERNAME }}/websites/stage/stage.psoni-staszow.pl
                     pwd
-                    /home/${{ secrets.USERNAME }}
-                    cd /home/${{ secrets.USERNAME }}/websites/stage/stage.psoni-staszow.pl /deploy.sh
+                    /home/${{ secrets.USERNAME }}/websites/stage/stage.psoni-staszow.pl/deploy.sh
