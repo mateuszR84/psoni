@@ -8,7 +8,7 @@
         "php": "^8.0.2",
         "october/rain": "^3.6",
         "laravel/framework": "^9.0",
-        "october/all": "^3.6",
+        "october/all": "^3.7",
         "rainlab/blog-plugin": "^1.7",
         "skynettechnologies/allinoneaccessibility-plugin": "^1.0",
         "rainlab/translate-plugin": "^2.2"

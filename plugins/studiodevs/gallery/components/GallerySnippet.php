@@ -2,8 +2,8 @@
 
 namespace Studiodevs\Gallery\Components;
 
-use StudioDevs\Gallery\Components\GalleryItem;
 use StudioDevs\Gallery\Models\Gallery;
+use StudioDevs\Gallery\Components\GalleryItem;
 
 /**
  * GallerySnippet Component
