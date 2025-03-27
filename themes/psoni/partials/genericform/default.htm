@@ -1,0 +1,40 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="container py-4 d-flex justify-content-center">
+        <div class="w-50">
+            <!-- Ogranicza szerokość formularza -->
+            <div class="mb-3">
+                <input class="form-control" name="name" placeholder="Imię i nazwisko" id="name" type="text" required />
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" name="email" id="email" type="email" placeholder="Email" required />
+            </div>
+
+            <div class="mb-3">
+                <textarea
+                    class="form-control"
+                    name="message"
+                    id="message"
+                    type="text"
+                    placeholder="Wiadomość"
+                    style="height: 10rem;"
+                ></textarea>
+            </div>
+ <!-- Checkbox z akceptacją przetwarzania danych -->
+        <div class="form-check d-flex align-items-center gap-2 mb-3">
+            <input class="form-check-input mt-0" type="checkbox" id="dataConsent" required />
+            <label class="form-check-label" for="dataConsent">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych.
+            </label>
+        </div>
+            <div class="text-center">
+                <!-- Wyśrodkowanie przycisku -->
+                <button class="btn btn-primary btn-lg px-4" type="submit">Wyślij</button>
+            </div>
+        </div>
+    </div>
+</form>

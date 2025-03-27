@@ -1,8 +1,21 @@
 url = "/psoni/kontakt"
-title = "Kontakt"
 layout = "psoni"
-==
+title = "Kontakt"
 
+[genericForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[message] = "required"
+messages_success = "Wiadomość wysłana pomyślnie."
+messages_errors = "Wystąpił błąd podczas próby wysłania. Spróbuj ponownie później."
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
 <div class="title-border">
     <h1 class="py-1 text-center">Kontakt</h1>
 </div>
@@ -19,5 +32,9 @@ layout = "psoni"
             <p><strong>Księgowość: </strong></p>
             <p>e-mail: <a href="mailto:ksiegowosc@psouu.org.pl">ksiegowosc@psouu-staszow.org</a></p>
         </div>
+        {% component "genericForm" %}
     </div>
 </div>
+{% put scripts %}
+<script src="{{ ['@framework','@framework.extras'] |theme}}"></script>
+{% endput %}
