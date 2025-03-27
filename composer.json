@@ -11,7 +11,8 @@
         "october/all": "^3.7",
         "rainlab/blog-plugin": "^1.7",
         "skynettechnologies/allinoneaccessibility-plugin": "^1.0",
-        "rainlab/translate-plugin": "^2.2"
+        "rainlab/translate-plugin": "^2.2",
+        "blakejones/magicforms-plugin": "^1.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5|^9.0",
