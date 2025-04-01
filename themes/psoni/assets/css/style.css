@@ -288,3 +288,9 @@ float: left;
     background-color: #0056b3; /* Ciemniejszy kolor po najechaniu */
     color: white;
 }
+
+.full-height {
+    min-height: 30vh; /* Minimum 100% wysokości ekranu */
+    display: flex;
+    flex-direction: column;
+}

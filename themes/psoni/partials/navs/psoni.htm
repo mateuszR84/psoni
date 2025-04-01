@@ -33,8 +33,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ 'psoni/sprawozdania'|page }}">Sprawozdania</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="sprawozdania" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sprawozdania</a>
+                    <ul class="dropdown-menu" aria-labelledby="sprawozdania">
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="{{ 'psoni/sprawozdania'|page }}">Finansowe</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ 'psoni/raporty'|page }}">Raport o stanie zapewnienia dostępności</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ 'psoni/darczyncy'|page }}">Darczyńcy</a>
