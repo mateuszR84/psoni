@@ -1,4 +1,6 @@
-<?php namespace StudioDevs\Bip;
+<?php
+
+namespace StudioDevs\Bip;
 
 use Backend;
 use System\Classes\PluginBase;

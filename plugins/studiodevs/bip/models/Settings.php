@@ -40,4 +40,16 @@ class Settings extends Model
 
         return $bipPagesArray;
     }
+
+    public static function getSections()
+    {
+        $sections = self::instance()->sections;
+        
+        $sectionsArray = [];
+        foreach ($sections as $section) {
+            $sectionsArray[$section['slug']] = $section['name'];
+        }
+
+        return $sectionsArray;
+    }
 }

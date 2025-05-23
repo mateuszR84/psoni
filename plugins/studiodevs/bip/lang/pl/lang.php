@@ -37,7 +37,11 @@ return [
             'articles' => 'Ilość artykułów'
         ],
         'settings' => [
-            'page' => 'Wybierz strony, na których chcesz publikować'
+            'page' => 'Wybierz strony, na których chcesz publikować',
+            'sections' => 'Sekcje',
+            'sections_prompt' => 'Dodaj nową sekcję',
+            'sections_name' => 'Nazwa',
+            'sections_slug' => 'Alias',
         ],
     ]
 ];
