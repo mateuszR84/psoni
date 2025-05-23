@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/studiodevs/bip/models/article/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Bip\Models\Article
+
+# Default redirect location
+defaultRedirect: studiodevs/bip/articles
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/bip/articles/update/:id
+    redirectClose: studiodevs/bip/articles
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/bip/articles
+    redirectClose: studiodevs/bip/articles
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

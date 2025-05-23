@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    title:
+        label: studiodevs.bip::lang.models.article.title
+
+    page:
+        label: studiodevs.bip::lang.models.article.page
+        
+    categories:
+        label: studiodevs.bip::lang.models.article.categories
+        sortable: false
+        clickable: false
+        relation: categories
+        valueFrom: slug
+
+    published_at:
+        label: studiodevs.bip::lang.models.article.published_at
+        type: date
+        mode: date
+
+    is_published:
+        label: studiodevs.bip::lang.models.article.is_published
+        type: switch
+
+

@@ -1,0 +1,8 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    pages:
+        label: studiodevs.bip::lang.models.settings.page
+        type: checkboxlist
