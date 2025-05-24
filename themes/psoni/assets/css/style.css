@@ -294,3 +294,14 @@ float: left;
     display: flex;
     flex-direction: column;
 }
+
+#header {
+    position: relative;
+    width: 100%;
+}
+
+#bip .bip-img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
