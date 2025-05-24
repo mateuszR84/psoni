@@ -1,0 +1,21 @@
+url = "kategoria/:slug"
+layout = "default"
+title = "BIP - kategoria"
+
+==
+<?php
+function onEnd()
+{
+    if (isset($this->category)) {
+        $this->page->title = $this->category->title;
+    }
+}
+?>
+==
+<div class="container">
+    <div class="row title-border">
+        <h1 class="py-1 text-center text-uppercase">Aktualności</h1>
+    </div>
+    <div class="mt-4 mb-5">
+    </div>
+</div>

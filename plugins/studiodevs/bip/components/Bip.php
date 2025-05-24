@@ -4,7 +4,7 @@ namespace StudioDevs\Bip\Components;
 
 use Cms\Classes\ComponentBase;
 use StudioDevs\Bip\Models\Article;
-use StudioDevs\Bip\Models\Settings;
+use StudioDevs\Bip\Models\Category;
 
 /**
  * Bip Component
@@ -43,6 +43,6 @@ class Bip extends ComponentBase
     {
         $this->articles = Article::published()->getForPage($this->property('page'))->get();
 
-        $this->sections = Settings::getSections();
+        $this->sections = Category::get();
     }
 }
