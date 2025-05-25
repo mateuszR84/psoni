@@ -1,15 +1,28 @@
-{% set articles = __SELF__.articles %}
-{% for article in articles %}
-{{ article.title }}
-{% endfor %}
+<div class="container">
+    <div class="row">
+        <!-- Sidebar z kategoriami -->
+        <aside class="col-md-4">
+            <h3>Kategorie</h3>
+            <ul class="list-group">
+                {% for section in __SELF__.sections %}
+                    <li class="list-group-item">
+                        <a 
+                            href="javascript:;" 
+                            data-request="{{ __SELF__ }}::onFilterArticles"
+                            data-request-data="category: '{{ section.slug }}'">
+                            {{ section.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </aside>
 
-{% set sections = __SELF__.sections %}
-{% for section in sections %}
-<ul>
-    <li>
-        <a href="{{ 'bip/category-item'|page({ 'slug': section.slug }) }}">
-            {{ section.name }}
-        </a>
-    </li>
-</ul>
-{% endfor %}
+        <!-- Lista artykułów -->
+        <main class="col-md-8">
+            <div id="articleList">
+                {% partial '@articles-list' articles=__SELF__.articles %}
+            </div>
+        </main>
+    </div>
+</div>
+

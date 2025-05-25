@@ -2,4 +2,4 @@ v1.0.1:
     - First version of Bip
     - 1_0_1_create_articles_table.php
     - 1_0_1_create_categories_table.php
-    - 1_0_1_seed_all_tables.php
+    - 1_0_1_seed_categories_table.php

@@ -45,4 +45,18 @@ class Bip extends ComponentBase
 
         $this->sections = Category::get();
     }
+
+    public function onFilterArticles()
+    {
+        $categorySlug = post('category');
+
+        $category = Category::where('slug', $categorySlug)->first();
+        $articles = $category
+            ? $category->articles()->published()->getForPage($this->property('page'))->get()
+            : collect();
+
+        return [
+            '#articleList' => $this->renderPartial('@articles-list', ['articles' => $articles])
+        ];
+    }
 }
