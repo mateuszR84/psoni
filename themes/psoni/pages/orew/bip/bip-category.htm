@@ -1,29 +1,13 @@
-url = "/orew/bip/:slug"
+url = "/orew/bip/kategorie/:slug"
 layout = "orew"
 title = "BIP - artykuł"
 
 [bip]
 page = "orew"
+categorySlug = "{{ :slug }}"
 ==
-<div class="article-list">
-    {% for article in articles %}
-        <a href="{{ 'orew/bip/bip-category-item'|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}" class="text-decoration-none text-dark">
-            <div class="article-item py-4 border-bottom">
-                <h5 class="mb-2">{{ article.title }}</h5>
-                
-                <div class="d-flex justify-content-between text-muted small">
-                    <span>
-                        <i class="fas fa-calendar-alt me-1"></i>
-                        {{ article.published_at|date('d.m.Y') }}
-                    </span>
-                    <span>
-                        <i class="fas fa-user me-1"></i>
-                        {{ article.user.full_name ?? article.user.name ?? 'Autor nieznany' }}
-                    </span>
-                </div>
-            </div>
-        </a>
-    {% else %}
-        <p>Brak artykułów.</p>
-    {% endfor %}
+<div class="container mb-5">
+    <div class="row">
+        {% component 'bip::category-articles' %}
+    </div>
 </div>

@@ -14,6 +14,8 @@ use StudioDevs\Bip\Models\Category;
 class Bip extends ComponentBase
 {
     public $articles;
+    public $categoryArticles;
+    public $category;
     public $sections;
     public $showRecent = true;
 
@@ -37,6 +39,12 @@ class Bip extends ComponentBase
                 'type' => 'dropdown',
                 'options' => Article::getPageOptions(),
             ],
+            'categorySlug' => [
+                'title' => 'studiodevs.bip::lang.components.bip.properties.category_slug_title',
+                'description' => 'studiodevs.bip::lang.components.bip.properties.category_slug_description',
+                'type' => 'string',
+                'default' => '{{ :slug }}'
+            ],
         ];
     }
 
@@ -49,6 +57,11 @@ class Bip extends ComponentBase
             ->get();
 
         $this->sections = Category::get();
+
+        if ($this->property('categorySlug')) {
+            $category = $this->category = Category::where('slug', $this->property('categorySlug'))->first();
+            $this->categoryArticles = Article::forCategory($category->id)->get();
+        }
     }
 
     public function onFilterArticles()

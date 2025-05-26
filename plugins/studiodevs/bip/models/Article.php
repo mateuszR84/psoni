@@ -43,7 +43,7 @@ class Article extends Model
         'featured_images' => [\System\Models\File::class, 'order' => 'sort_order'],
         'content_images'  => \System\Models\File::class
     ];
-    
+
     /**
      * getUserOptions
      */
@@ -52,7 +52,7 @@ class Article extends Model
         $options = [];
 
         foreach (BackendUser::all() as $user) {
-            $options[$user->id] = $user->fullname . ' ('.$user->login.')';
+            $options[$user->id] = $user->fullname . ' (' . $user->login . ')';
         }
 
         return $options;
@@ -60,7 +60,7 @@ class Article extends Model
 
     public static function getPageOptions()
     {
-        $bipPages = Settings::getBipPages();   
+        $bipPages = Settings::getBipPages();
         return $bipPages;
     }
 
@@ -86,5 +86,12 @@ class Article extends Model
     public function scopePublished($query)
     {
         return $query->where('is_published', true);
+    }
+
+    public function scopeForCategory($query, $categoryId)
+    {
+        return $query->whereHas('categories', function ($q) use ($categoryId) {
+            $q->where('id', $categoryId);
+        });
     }
 }
