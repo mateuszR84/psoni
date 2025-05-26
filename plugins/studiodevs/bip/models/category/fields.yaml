@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: studiodevs.bip::lang.models.category.name
+        placeholder: studiodevs.bip::lang.models.category.name_placeholder
+        span: left
+
+    slug:
+        label: studiodevs.bip::lang.models.category.slug
+        span: right
+        placeholder: studiodevs.bip::lang.models.category.slug_placeholder
+        preset: name
+
+    description:
+        label: studiodevs.bip::lang.models.category.description
+        size: large
+        span: full
+        type: textarea

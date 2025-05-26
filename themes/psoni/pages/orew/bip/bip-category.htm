@@ -1,0 +1,13 @@
+url = "/orew/bip/kategorie/:slug"
+layout = "orew"
+title = "BIP - artykuł"
+
+[bip]
+page = "orew"
+categorySlug = "{{ :slug }}"
+==
+<div class="container mb-5">
+    <div class="row">
+        {% component 'bip::category-articles' %}
+    </div>
+</div>
