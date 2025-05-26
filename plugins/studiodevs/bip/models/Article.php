@@ -94,4 +94,12 @@ class Article extends Model
             $q->where('id', $categoryId);
         });
     }
+
+    public function scopeSearch($query, $term)
+    {
+        return $query->where(function ($q) use ($term) {
+            $q->where('title', 'like', "%$term%")
+                ->orWhere('content', 'like', "%$term%");
+        });
+    }
 }

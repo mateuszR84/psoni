@@ -18,6 +18,7 @@ class Bip extends ComponentBase
     public $category;
     public $sections;
     public $showRecent = true;
+    public $search;
 
     public function componentDetails()
     {
@@ -50,11 +51,20 @@ class Bip extends ComponentBase
 
     public function onRun()
     {
-        $this->articles = Article::published()
-            ->getForPage($this->property('page'))
-            ->orderBy('created_at', 'desc')
-            ->limit(5)
-            ->get();
+        $this->search = get('search'); // pobiera frazę z URL
+
+        $query = Article::published()->getForPage($this->property('page'));
+
+        if ($this->search) {
+            $query = $query->search($this->search);
+        }
+
+        $this->articles = $query->get();
+        // $this->articles = Article::published()
+        //     ->getForPage($this->property('page'))
+        //     ->orderBy('created_at', 'desc')
+        //     ->limit(5)
+        //     ->get();
 
         $this->sections = Category::get();
 
