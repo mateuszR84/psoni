@@ -1,9 +1,41 @@
-{% for article in articles %}
-    <article class="mb-4">
-        <h4>{{ article.title }}</h4>
-        <p>{{ article.summary }}</p>
-        <a href="{{ article.url }}">Czytaj więcej</a>
-    </article>
+{% if showRecent is not defined or showRecent %}
+    <h3 class="mb-4">Ostatnio dodane</h3>
 {% else %}
-    <p>Brak artykułów w tej kategorii.</p>
-{% endfor %}
+    {% if activeCategory is defined and activeCategory %}
+        <h3 class="mb-4">
+            <a href="{{ 'orew/bip/bip-category'|page({ 'slug': activeCategory.slug }) }}">
+                {{ activeCategory.name }}</h3>
+            </a>
+    {% endif %}
+{% endif %}
+
+<div class="article-list">
+    {% for article in articles %}
+        <a href="{{ 'orew/bip/bip-category-item'|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}">
+            <div class="article-item bg-white p-4 mb-3 shadow-sm rounded border">
+                
+                {# 🏷️ Kategoria (skrócona) #}
+                {% set categoryName = article.categories[0].name %}
+                {% set shortCategory = categoryName|length > 40 ? categoryName|slice(0, 37) ~ '...' : categoryName %}
+                <div class="text-muted small mb-1">
+                    {{ shortCategory }}
+                </div>
+
+                <h5 class="mb-2">{{ article.title }}</h5>
+                
+                <div class="d-flex justify-content-between text-muted small">
+                    <span>
+                        <i class="fas fa-calendar-alt me-1"></i>
+                        {{ article.published_at|date('d.m.Y') }}
+                    </span>
+                    <span>
+                        <i class="fas fa-user me-1"></i>
+                        {{ article.user.full_name ?? article.user.name ?? 'Autor nieznany' }}
+                    </span>
+                </div>
+            </div>
+        </a>
+    {% else %}
+        <p>Brak artykułów.</p>
+    {% endfor %}
+</div>

@@ -15,6 +15,7 @@ class Bip extends ComponentBase
 {
     public $articles;
     public $sections;
+    public $showRecent = true;
 
     public function componentDetails()
     {
@@ -41,7 +42,11 @@ class Bip extends ComponentBase
 
     public function onRun()
     {
-        $this->articles = Article::published()->getForPage($this->property('page'))->get();
+        $this->articles = Article::published()
+            ->getForPage($this->property('page'))
+            ->orderBy('created_at', 'desc')
+            ->limit(5)
+            ->get();
 
         $this->sections = Category::get();
     }
@@ -56,7 +61,11 @@ class Bip extends ComponentBase
             : collect();
 
         return [
-            '#articleList' => $this->renderPartial('@articles-list', ['articles' => $articles])
+            '#articleList' => $this->renderPartial('@articles-list', [
+                'articles' => $articles,
+                'showRecent' => false,
+                'activeCategory' => $category,
+            ])
         ];
     }
 }

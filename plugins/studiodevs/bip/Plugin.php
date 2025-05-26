@@ -48,6 +48,7 @@ class Plugin extends PluginBase
     {
         return [
             'StudioDevs\Bip\Components\Bip' => 'bip',
+            'StudioDevs\Bip\Components\BipArticle' => 'bipArticle',
         ];
     }
 

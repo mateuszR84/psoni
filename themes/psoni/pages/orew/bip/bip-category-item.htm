@@ -1,0 +1,53 @@
+url = "/orew/bip/:category/:slug"
+layout = "orew"
+title = "BIP - artykuł"
+
+[bipArticle]
+slug = {{ :slug }}
+==
+<?php
+function onEnd()
+{
+    if (isset($this->article)) {
+        $this->page->title = 'OREW|BIP - ' . $this->article->title;
+    }
+}
+?>
+==
+{% if article %}
+    <article class="single-article container my-5">
+        
+        <!-- 🔙 Powrót -->
+        <div class="mb-5">
+            <a href="javascript:history.back()">
+                <i class="fas fa-arrow-left me-1"></i> Powrót do listy kategorii
+            </a>
+        </div>
+
+        <h1 class="text-center mb-5">{{ article.title }}</h1>
+
+        <div class="article-content">
+            {{ article.content|raw }}
+        </div>
+        
+        <!-- 👤 Informacje o artykule -->
+        <div class="article-meta mt-5 p-4 border-top text-muted small" style="max-width: 800px; margin: 0 auto;">
+            <div class="d-flex justify-content-between flex-wrap gap-3">
+                <span>
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    Opublikowano: {{ article.published_at|date('d.m.Y') }}
+                </span>
+                <span>
+                    <i class="fas fa-pen-to-square me-1"></i>
+                    Zaktualizowano: {{ article.updated_at|date('d.m.Y') }}
+                </span>
+                <span>
+                    <i class="fas fa-user me-1"></i>
+                    Autor: {{ article.user.full_name ?? 'Autor nieznany' }}
+                </span>
+            </div>
+        </div>
+    </article>
+{% else %}
+    <p class="text-center">Nie znaleziono artykułu.</p>
+{% endif %}
