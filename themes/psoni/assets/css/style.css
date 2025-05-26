@@ -295,13 +295,8 @@ float: left;
     flex-direction: column;
 }
 
-#header {
-    position: relative;
-    width: 100%;
-}
-
 #bip .bip-img {
-    width: 150px;
-    height: 100px;
+    max-width: 80px;
+    height: 40px;
     object-fit: contain;
 }
