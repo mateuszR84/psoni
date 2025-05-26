@@ -5,6 +5,7 @@ namespace StudioDevs\Bip\Components;
 use Cms\Classes\ComponentBase;
 use StudioDevs\Bip\Models\Article;
 use StudioDevs\Bip\Models\Category;
+use StudioDevs\Bip\Models\Settings;
 
 /**
  * Bip Component
@@ -17,6 +18,8 @@ class Bip extends ComponentBase
     public $categoryArticles;
     public $category;
     public $sections;
+    public $redactionAddress;
+    public $editor;
     public $showRecent = true;
 
     public function componentDetails()
@@ -62,6 +65,9 @@ class Bip extends ComponentBase
             $category = $this->category = Category::where('slug', $this->property('categorySlug'))->first();
             $this->categoryArticles = Article::forCategory($category->id)->get();
         }
+
+        $this->redactionAddress = Settings::getRedactionAddress();
+        $this->editor = Settings::getEditor();
     }
 
     public function onFilterArticles()

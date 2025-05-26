@@ -52,4 +52,14 @@ class Settings extends Model
 
         return $sectionsArray;
     }
+
+    public static function getRedactionAddress()
+    {
+        return self::instance()->address;
+    }
+
+    public static function getEditor()
+    {
+        return self::instance()->editor;
+    }
 }
