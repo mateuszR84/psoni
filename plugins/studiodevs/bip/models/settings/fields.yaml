@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    pages:
+        label: studiodevs.bip::lang.models.settings.page
+        type: checkboxlist
+    
+    sections:
+        label: studiodevs.bip::lang.models.settings.sections
+        type: repeater
+        prompt: studiodevs.bip::lang.models.settings.sections_prompt 
+        form:
+            fields:
+                name:            
+                    label: studiodevs.bip::lang.models.settings.sections_name
+                    type: text
+                    span: left
+                slug:            
+                    label: studiodevs.bip::lang.models.settings.sections_slug
+                    type: text
+                    preset: name
+                    span: right

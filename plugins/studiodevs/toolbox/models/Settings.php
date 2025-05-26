@@ -25,7 +25,7 @@ class Settings extends Model
     
     public static function getPostCategoriesPages()
     {
-        $categoriesPages = self::instance()->post_category_pages;
+        $categoriesPages = self::instance()->post_category_pages ?? [];
         
         $categoriesPagesArray = [];
         foreach ($categoriesPages as $page) {

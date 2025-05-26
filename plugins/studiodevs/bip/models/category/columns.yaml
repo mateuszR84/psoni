@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: studiodevs.bip::lang.models.category.name
+        searchable: true
+
+    articles_count:
+        label: studiodevs.bip::lang.models.category.articles
+        relation: articles
+        useRelationCount: true
+        sortable: false

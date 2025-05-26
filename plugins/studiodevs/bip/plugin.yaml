@@ -1,0 +1,21 @@
+plugin:
+    name: "studiodevs.bip::lang.plugin.name"
+    description: "studiodevs.bip::lang.plugin.description"
+    author: "StudioDEVS"
+    icon: icon-cog
+    homepage: ""
+navigation:
+    bip:
+        label: "studiodevs.bip::lang.navigation.bip.label"
+        url: studiodevs/bip/articles
+        icon: icon-bullhorn
+        order: 700
+        sideMenu:
+            articles:
+                label: "studiodevs.bip::lang.navigation.bip.articles"
+                url: studiodevs/bip/articles
+                icon: icon-edit
+            categories:
+                label: "studiodevs.bip::lang.navigation.bip.categories"
+                url: studiodevs/bip/categories
+                icon: icon-filter

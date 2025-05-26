@@ -20,3 +20,4 @@ fields:
                     label: Strona kategorii
                     type: dropdown
                     span: right
+                    emptyOption: Wybierz stronę
