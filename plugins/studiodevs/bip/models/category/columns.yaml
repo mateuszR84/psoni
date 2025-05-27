@@ -6,6 +6,12 @@ columns:
     name:
         label: studiodevs.bip::lang.models.category.name
         searchable: true
+    slug:
+        label: studiodevs.bip::lang.models.category.slug
+        searchable: true
+
+    page_code:
+        label: studiodevs.bip::lang.models.article.page
 
     articles_count:
         label: studiodevs.bip::lang.models.category.articles

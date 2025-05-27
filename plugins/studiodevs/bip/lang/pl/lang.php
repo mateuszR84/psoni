@@ -46,6 +46,7 @@ return [
             'editor' => 'Dane redaktora',
             'tab_redaction' => 'Dane redakcji',
             'tab_editor' => 'Dane redaktora',
+            'tab_instruction' => 'Instrukcja',
             'address_name' => 'Nazwa placówki',
             'address_street' => 'Ulica',
             'address_house_no' => 'Numer budynku',
@@ -56,6 +57,22 @@ return [
             'editor_phone_no' => 'Telefon',
             'editor_fax_no' => 'Fax',
             'editor_email' => 'Adres email',
+            'instruction' => 'Instrukcja użytkowania BIP',
         ],
-    ]
+    ],
+    'components' => [
+        'bip'=> [
+            'properties' => [
+                'page' => 'Strona',
+                'page_description' => 'Wybierz stronę, na której jest osadzony BIP',
+                'group_pages' => 'Nawigacja',
+                'article_page' => 'Strona artykułu',
+                'article_page_description' => 'Wybierz stronę, na której wyświetlany jest pojedynczy artykuł',
+                'main_page' => 'Strona główna BIP',
+                'main_page_description' => 'Wybierz główną stronę BIP',
+                'category_slug_title' => 'Kategoria',
+                'category_page_description' => 'Alias kategorii, która ma się wyświetlać'
+            ],
+        ],
+    ],
 ];

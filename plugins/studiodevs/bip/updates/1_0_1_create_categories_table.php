@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable()->index();
             $table->string('code')->nullable();
+            $table->string('page_code');
+            $table->integer('menu_pos')->nullable()->default(1);
             $table->text('description')->nullable();
             $table->integer('parent_id')->unsigned()->index()->nullable();
             $table->integer('nest_left')->nullable();

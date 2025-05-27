@@ -26,7 +26,10 @@ class CategorySeeder extends Seeder
         foreach ($categories as $name) {
             Category::updateOrCreate(
                 ['slug' => Str::slug($name)],
-                ['name' => $name]
+                [
+                    'name' => $name,
+                    'page_code' => 'orew',
+                ]
             );
         }
     }

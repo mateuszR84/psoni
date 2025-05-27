@@ -62,4 +62,9 @@ class Settings extends Model
     {
         return self::instance()->editor;
     }
+
+    public static function getInstruction()
+    {
+        return self::instance()->instruction;
+    }
 }

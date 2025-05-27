@@ -1,0 +1,51 @@
+url = "/nps/bip/:category/:slug"
+layout = "nps"
+title = "bip - artykuł"
+
+[bipArticle]
+slug = {{ :slug }}
+==
+<?php
+function onend()
+{
+    if (isset($this->article)) {
+        $this->page->title = 'nps|bip - ' . $this->article->title;
+    }
+}
+?>
+==
+{% if article %}
+    <article class="single-article container my-5">
+        
+        <div class="mb-5">
+            <a href="javascript:history.back()">
+                <i class="fas fa-arrow-left me-1"></i> powrót do listy kategorii
+            </a>
+        </div>
+
+        <h1 class="text-center mb-5">{{ article.title }}</h1>
+
+        <div class="article-content">
+            {{ article.content|raw }}
+        </div>
+        
+        <div class="article-meta mt-5 p-4 border-top text-muted small" style="max-width: 800px; margin: 0 auto;">
+            <div class="d-flex justify-content-between flex-wrap gap-3">
+                <span>
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    opublikowano: {{ article.published_at|date('d.m.y') }}
+                </span>
+                <span>
+                    <i class="fas fa-pen-to-square me-1"></i>
+                    zaktualizowano: {{ article.updated_at|date('d.m.y') }}
+                </span>
+                <span>
+                    <i class="fas fa-user me-1"></i>
+                    autor: {{ article.user.full_name ?? 'autor nieznany' }}
+                </span>
+            </div>
+        </div>
+    </article>
+{% else %}
+    <p class="text-center">nie znaleziono artykułu.</p>
+{% endif %}

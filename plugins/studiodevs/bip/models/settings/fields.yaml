@@ -11,6 +11,7 @@ tabs:
     icons:
         studiodevs.bip::lang.models.settings.tab_redaction: icon-id-card-1
         studiodevs.bip::lang.models.settings.tab_editor: icon-user-actions-key
+        studiodevs.bip::lang.models.settings.tab_instruction: icon-text-code-block
     fields:
         address:
             label: studiodevs.bip::lang.models.settings.address
@@ -64,3 +65,8 @@ tabs:
                         label: studiodevs.bip::lang.models.settings.editor_email
                         type: text
                         span: left
+        instruction:
+            label: studiodevs.bip::lang.models.settings.instruction
+            tab: studiodevs.bip::lang.models.settings.tab_instruction
+            type: richeditor
+            size: large

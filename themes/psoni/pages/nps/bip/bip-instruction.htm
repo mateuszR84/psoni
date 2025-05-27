@@ -1,0 +1,15 @@
+url = "/nps/bip/instrukcja"
+layout = "nps"
+title = "BIP - instrukcja"
+
+[bip]
+page = "nps"
+articlePage = "nps/bip/bip-category-item"
+mainPage = "nps/bip/bip"
+categorySlug = "{{ :slug }}"
+==
+<div class="container mb-5">
+    <div class="row">
+        {% component 'bip::instruction' %}
+    </div>
+</div>

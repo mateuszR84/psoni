@@ -1,20 +1,20 @@
-{# 🔙 Powrót do listy kategorii #}
+{% if __SELF__.articlePage %}
+    {% set articlePage = __SELF__.articlePage %}
+{% endif %}
 <div class="mb-4">
-    <a href="{{ 'orew/bip/bip'|page }}">
+    <a href="{{ __SELF__.mainPage|page }}">
         <i class="fas fa-arrow-left me-1"></i> Powrót do listy kategorii
     </a>
 </div>
 
-{# 🏷️ Tytuł kategorii #}
 <h3 class="mb-4 text-center">{{ __SELF__.category.name }}</h3>
 
-{# 📄 Lista artykułów #}
 <div class="article-list">
     {% for article in __SELF__.categoryArticles %}
-        <a href="{{ 'orew/bip/bip-category-item'|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}" class="text-decoration-none text-dark">
+        <a href="{{ articlePage|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}" class="text-decoration-none text-dark">
             <div class="article-item py-4 border-bottom">
                 <h5 class="mb-2">{{ article.title }}</h5>
-                
+
                 <div class="d-flex justify-content-between text-muted small">
                     <span>
                         <i class="fas fa-calendar-alt me-1"></i>
@@ -22,7 +22,7 @@
                     </span>
                     <span>
                         <i class="fas fa-user me-1"></i>
-                        {{ article.user.full_name ?? article.user.name ?? 'Autor nieznany' }}
+                        {{ article.user.full_name ?? article.user.name ?? 'N/A' }}
                     </span>
                 </div>
             </div>

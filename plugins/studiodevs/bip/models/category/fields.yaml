@@ -14,8 +14,14 @@ fields:
         placeholder: studiodevs.bip::lang.models.category.slug_placeholder
         preset: name
 
+    page_code:
+        label: studiodevs.bip::lang.models.article.page
+        type: dropdown
+        span: left
+        emptyOption: studiodevs.bip::lang.models.article.page_empty_option
+
     description:
         label: studiodevs.bip::lang.models.category.description
         size: large
         span: full
-        type: textarea
+        type: richeditor

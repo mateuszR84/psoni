@@ -1,0 +1,46 @@
+<div class="mb-4">
+    <a href="{{ 'orew/bip/bip'|page }}">
+        <i class="fas fa-arrow-left me-1"></i> Powrót do listy kategorii
+    </a>
+</div>
+
+<h3 class="mb-4 text-center">Adres Redakcji Biuletynu Informacji Publicznej</h3>
+{% set address = __SELF__.redactionAddress %}
+<div class="border rounded p-4 mb-5 bg-light">
+    {% if address.name %}
+        <p class="mb-1 fw-bold">{{ address.name }}</p>
+    {% endif %}
+    {% if address.street or address.house_no %}
+        <p class="mb-1">
+            {% if address.street %}{{ address.street }}{% endif %}
+            {% if address.house_no %} {{ address.house_no }}{% endif %}
+        </p>
+    {% endif %}
+    {% if address.postal_code or address.city %}
+        <p class="mb-0">
+            {% if address.postal_code %}{{ address.postal_code }}{% endif %}
+            {% if address.city %} {{ address.city }}{% endif %}
+        </p>
+    {% endif %}
+</div>
+
+{# 👤 Dane redaktorów BIP #}
+<h3 class="mb-4 text-center">Dane osób redagujących Biuletyn Informacji Publicznej</h3>
+{% set editor = __SELF__.editor %}
+<div class="border rounded p-4 bg-light">
+    {% if editor.first_name or editor.last_name %}
+        <p class="mb-1 fw-bold">
+            {% if editor.first_name %}{{ editor.first_name }}{% endif %}
+            {% if editor.last_name %}{{ editor.last_name }}{% endif %}
+        </p>
+    {% endif %}
+    {% if editor.phone_no %}
+        <p class="mb-1"><i class="fas fa-phone me-1"></i>{{ editor.phone_no }}</p>
+    {% endif %}
+    {% if editor.fax %}
+        <p class="mb-1"><i class="fas fa-fax me-1"></i>{{ editor.fax }}</p>
+    {% endif %}
+    {% if editor.email %}
+        <p class="mb-0"><i class="fas fa-envelope me-1"></i><a href="mailto:{{ editor.email }}">{{ editor.email }}</a></p>
+    {% endif %}
+</div>
