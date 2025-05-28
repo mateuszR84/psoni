@@ -15,10 +15,15 @@ fields:
         preset: name
 
     page_code:
-        label: studiodevs.bip::lang.models.article.page
+        label: studiodevs.bip::lang.models.category.page
         type: dropdown
         span: left
         emptyOption: studiodevs.bip::lang.models.article.page_empty_option
+
+    menu_order:
+        label: studiodevs.bip::lang.models.category.menu_order
+        type: number
+        span: right
 
     description:
         label: studiodevs.bip::lang.models.category.description

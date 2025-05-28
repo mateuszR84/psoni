@@ -3,7 +3,7 @@
         href="<?= Backend::url('studiodevs/bip/categories/create') ?>"
         class="btn btn-primary">
         <i class="icon-plus"></i>
-        <?= __("New :name", ['name' => 'Category']) ?>
+        <?= __("Nowa :name", ['name' => 'Kategoria']) ?>
     </a>
 
     <div class="toolbar-divider"></div>

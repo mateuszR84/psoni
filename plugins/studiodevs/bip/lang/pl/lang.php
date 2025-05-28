@@ -34,7 +34,10 @@ return [
             'slug' => 'Alias',
             'slug_placeholder' => 'nowa-kategoria',
             'description' => 'Opis',
-            'articles' => 'Ilość artykułów'
+            'articles' => 'Ilość artykułów',
+            'page' => 'Opublikuj na:',
+            'menu_order' => 'Kolejność wyświetlania w menu',
+            'menu_order_column' => 'Menu order',
         ],
         'settings' => [
             'page' => 'Wybierz strony, na których chcesz publikować',

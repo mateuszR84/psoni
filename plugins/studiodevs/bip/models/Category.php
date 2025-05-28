@@ -24,7 +24,8 @@ class Category extends Model
      */
     public $rules = [
         'name' => 'required',
-        'page_code' => 'required'
+        'page_code' => 'required',
+        'menu_order' => 'integer',
     ];
 
     public $belongsToMany = [

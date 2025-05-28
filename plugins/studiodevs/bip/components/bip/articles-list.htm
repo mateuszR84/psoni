@@ -6,7 +6,9 @@
 {% endif %}
 
 {% if showRecent is not defined or showRecent %}
-    <h3 class="mb-4">Ostatnio dodane</h3>
+    <div class="mt-5">
+        <img src="{{ 'assets/img/bip.svg'|theme }}" alt="bip-logo" class="bip-img w-25 mx-auto d-block">
+    </div>
 {% else %}
     {% if activeCategory is defined and activeCategory %}
         <h3 class="mb-4">

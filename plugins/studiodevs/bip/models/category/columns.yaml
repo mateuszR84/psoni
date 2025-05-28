@@ -6,12 +6,12 @@ columns:
     name:
         label: studiodevs.bip::lang.models.category.name
         searchable: true
-    slug:
-        label: studiodevs.bip::lang.models.category.slug
-        searchable: true
 
     page_code:
-        label: studiodevs.bip::lang.models.article.page
+        label: studiodevs.bip::lang.models.category.page
+
+    menu_order:
+        label: studiodevs.bip::lang.models.category.menu_order_column
 
     articles_count:
         label: studiodevs.bip::lang.models.category.articles
