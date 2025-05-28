@@ -1,0 +1,9 @@
+scopes:
+
+    page_code:
+        label: Sortuj po stronie
+        modelClass: StudioDevs\Bip\Models\Category
+        nameFrom: page_code
+        type: group
+        conditions: page_code in (:value)
+        options: getPageCodeOptions

@@ -3,7 +3,7 @@
         href="<?= Backend::url('studiodevs/bip/articles/create') ?>"
         class="btn btn-primary">
         <i class="icon-plus"></i>
-        <?= __("New :name", ['name' => 'Article']) ?>
+        <?= __("Nowy :name", ['name' => 'Artykuł']) ?>
     </a>
 
     <div class="toolbar-divider"></div>

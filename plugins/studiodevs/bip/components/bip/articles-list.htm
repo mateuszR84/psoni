@@ -1,41 +1,56 @@
+{% if __SELF__.articlePage %}
+    {% set articlePage = __SELF__.articlePage %}
+{% endif %}
+{% if __SELF__.categoryPage %}
+    {% set categoryPage = __SELF__.categoryPage %}
+{% endif %}
+
 {% if showRecent is not defined or showRecent %}
-    <h3 class="mb-4">Ostatnio dodane</h3>
+    <div class="my-5">
+        <img src="{{ 'assets/img/bip.svg'|theme }}" alt="bip-logo" class="bip-img w-25 mx-auto d-block">
+    </div>
 {% else %}
     {% if activeCategory is defined and activeCategory %}
         <h3 class="mb-4">
-            <a href="{{ 'orew/bip/bip-category'|page({ 'slug': activeCategory.slug }) }}">
-                {{ activeCategory.name }}</h3>
+            <a href="{{ categoryPage|page({ 'slug': activeCategory.slug }) }}">
+                {{ activeCategory.name }}
             </a>
+        </h3>
+
+        {% if activeCategory.description %}
+            <div class="mb-4 p-3 bg-light border rounded">
+                {{ activeCategory.description|raw }}
+            </div>
+        {% endif %}
     {% endif %}
 {% endif %}
 
-<div class="article-list">
-    {% for article in articles %}
-        <a href="{{ 'orew/bip/bip-category-item'|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}">
-            <div class="article-item bg-white p-4 mb-3 shadow-sm rounded border">
-                
-                {# 🏷️ Kategoria (skrócona) #}
-                {% set categoryName = article.categories[0].name %}
-                {% set shortCategory = categoryName|length > 40 ? categoryName|slice(0, 37) ~ '...' : categoryName %}
-                <div class="text-muted small mb-1">
-                    {{ shortCategory }}
-                </div>
+{% if articles|length > 0 %}
+    <div class="article-list">
+        {% for article in articles %}
+            <a href="{{ articlePage|page({ 'slug': article.slug, 'category': article.categories[0].slug }) }}">
+                <div class="article-item bg-white p-4 mb-3 shadow-sm rounded border">
+                    
+                    {% set categoryName = article.categories[0].name %}
+                    {% set shortCategory = categoryName|length > 40 ? categoryName|slice(0, 37) ~ '...' : categoryName %}
+                    <div class="text-muted small mb-1">
+                        {{ shortCategory }}
+                    </div>
 
-                <h5 class="mb-2">{{ article.title }}</h5>
-                
-                <div class="d-flex justify-content-between text-muted small">
-                    <span>
-                        <i class="fas fa-calendar-alt me-1"></i>
-                        {{ article.published_at|date('d.m.Y') }}
-                    </span>
-                    <span>
-                        <i class="fas fa-user me-1"></i>
-                        {{ article.user.full_name ?? article.user.name ?? 'Autor nieznany' }}
-                    </span>
+                    <h5 class="mb-2">{{ article.title }}</h5>
+                    
+                    <div class="d-flex justify-content-between text-muted small">
+                        <span>
+                            <i class="fas fa-calendar-alt me-1"></i>
+                            {{ article.published_at|date('d.m.Y') }}
+                        </span>
+                        <span>
+                            <i class="fas fa-user me-1"></i>
+                            {{ article.user.full_name ?? article.user.name ?? 'Autor nieznany' }}
+                        </span>
+                    </div>
                 </div>
-            </div>
-        </a>
-    {% else %}
-        <p>Brak artykułów.</p>
-    {% endfor %}
-</div>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

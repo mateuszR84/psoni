@@ -6,19 +6,67 @@ fields:
     pages:
         label: studiodevs.bip::lang.models.settings.page
         type: checkboxlist
-    
-    sections:
-        label: studiodevs.bip::lang.models.settings.sections
-        type: repeater
-        prompt: studiodevs.bip::lang.models.settings.sections_prompt 
-        form:
-            fields:
-                name:            
-                    label: studiodevs.bip::lang.models.settings.sections_name
-                    type: text
-                    span: left
-                slug:            
-                    label: studiodevs.bip::lang.models.settings.sections_slug
-                    type: text
-                    preset: name
-                    span: right
+
+tabs:
+    icons:
+        studiodevs.bip::lang.models.settings.tab_redaction: icon-id-card-1
+        studiodevs.bip::lang.models.settings.tab_editor: icon-user-actions-key
+        studiodevs.bip::lang.models.settings.tab_instruction: icon-text-code-block
+    fields:
+        address:
+            label: studiodevs.bip::lang.models.settings.address
+            type: nestedform
+            tab: studiodevs.bip::lang.models.settings.tab_redaction
+            form:
+                fields:
+                    name:
+                        label: studiodevs.bip::lang.models.settings.address_name
+                        type: text
+                        span: full
+                    street:
+                        label: studiodevs.bip::lang.models.settings.address_street
+                        type: text
+                        span: left
+                    house_no:
+                        label: studiodevs.bip::lang.models.settings.address_house_no
+                        type: text
+                        span: right
+                    postal_code:
+                        label: studiodevs.bip::lang.models.settings.address_postal_code
+                        type: text
+                        span: left
+                    city:
+                        label: studiodevs.bip::lang.models.settings.address_city
+                        type: text
+                        span: right
+        editor:
+            label: studiodevs.bip::lang.models.settings.editor
+            type: nestedform
+            tab: studiodevs.bip::lang.models.settings.tab_editor
+            form:
+                fields:
+                    first_name:
+                        label: studiodevs.bip::lang.models.settings.editor_first_name
+                        type: text
+                        span: left
+                    last_name:
+                        label: studiodevs.bip::lang.models.settings.editor_last_name
+                        type: text
+                        span: right
+                    phone_no:
+                        label: studiodevs.bip::lang.models.settings.editor_phone_no
+                        type: text
+                        span: left
+                    fax_no:
+                        label: studiodevs.bip::lang.models.settings.editor_fax_no
+                        type: text
+                        span: right
+                    email:
+                        label: studiodevs.bip::lang.models.settings.editor_email
+                        type: text
+                        span: left
+        instruction:
+            label: studiodevs.bip::lang.models.settings.instruction
+            tab: studiodevs.bip::lang.models.settings.tab_instruction
+            type: richeditor
+            size: large

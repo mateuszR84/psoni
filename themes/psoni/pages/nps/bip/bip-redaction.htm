@@ -1,0 +1,15 @@
+url = "/nps/bip/redakcja"
+layout = "nps"
+title = "BIP - artykuł"
+
+[bip]
+page = "nps"
+articlePage = "nps/bip/bip-category-item"
+mainPage = "nps/bip/bip"
+categorySlug = "{{ :slug }}"
+==
+<div class="container mb-5">
+    <div class="row">
+        {% component 'bip::redaction' %}
+    </div>
+</div>

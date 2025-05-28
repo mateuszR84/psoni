@@ -1,5 +1,8 @@
-<?php namespace StudioDevs\Bip\Models;
+<?php
 
+namespace StudioDevs\Bip\Models;
+
+use Str;
 use Model;
 
 /**
@@ -19,16 +22,33 @@ class Category extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required',
+        'page_code' => 'required',
+        'menu_order' => 'integer',
+    ];
 
     public $belongsToMany = [
-        'articles' => ['StudioDevs\Bip\Models\Article',
+        'articles' => [
+            'StudioDevs\Bip\Models\Article',
             'table' => 'studiodevs_bip_articles_categories',
             'order' => 'published_at desc',
         ],
-        'articles_count' => ['Studiodevs\Bip\Models\Article',
+        'articles_count' => [
+            'Studiodevs\Bip\Models\Article',
             'table' => 'studiodevs_bip_articles_categories',
             'count' => true
         ]
     ];
+
+    public static function getPageCodeOptions()
+    {
+        $bipPages = Settings::getBipPages();
+        return $bipPages;
+    }
+
+    public function beforeValidate()
+    {
+        $this->slug = $this->page_code . '-' . Str::slug($this->name);
+    }
 }
