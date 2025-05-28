@@ -24,6 +24,7 @@ fields:
         label: studiodevs.bip::lang.models.category.menu_order
         type: number
         span: right
+        default: 1
 
     description:
         label: studiodevs.bip::lang.models.category.description

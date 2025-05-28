@@ -1,0 +1,122 @@
+{
+    "orew-status-prawny-forma-prawna": {
+        "name": "Status prawny/forma prawna",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Ośrodek Rehabilitacyjno-Edukacyjno-Wychowawczy w Staszowie (OREW) jest placówką oświatową.</p>"
+    },
+    "orew-organizacja": {
+        "name": "Organizacja",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Organizację określa Statut OREW i Regulamin OREW.</p>"
+    },
+    "orew-przedmiot-dzialalnosci": {
+        "name": "Przedmiot działalności",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Ośrodek Rehablitacyjno-Edukacyjno-Wychowawczy w Staszowie zapewnia:</p><p>&nbsp; &nbsp; • realizację obowiązku szkolnego na poziomie szkoły podstawowej dla dzieci i młodzieży z niepełnosprawnością intelektualną w stopniu umiarkowanym i znacznym ze sprzężeniami od 7 do 21 roku życia,</p><p>&nbsp; &nbsp; • realizację obowiązku nauki na poziomie szkoły przysposabiającej do pracy dla młodzieży z niepełnosprawnością intelektualną w stopniu umiarkowanym i znacznym ze sprzężeniami do 24 roku życia,&nbsp;</p><p>&nbsp; &nbsp; • zespołowe i indywidualne zajęcia rewalidacyjno-wychowawczych dla dzieci i młodzieży z głęboką niepełnosprawnością intelektualną od 3 do 25 roku życia,</p><p>&nbsp; &nbsp; • wczesne wspomagania rozwoju dla dzieci od chwili wykrycia niepełnosprawności do czasu podjęcia nauki w szkole,</p><p>&nbsp; &nbsp; • opiekę dostosowaną do potrzeb wynikających z wielorakiej niepełnosprawności wychowanków obejmującej w szczególności pomoc przy: przemieszczaniu się, czynnościach fizjologicznych, utrzymaniu higieny, spożywaniu pokarmów, ubieraniu i rozbieraniu się.</p>"
+    },
+    "orew-organy-i-osoby-sprawujace-funkcje-i-ich-kompetencje": {
+        "name": "Organy i osoby sprawujące funkcje i ich kompetencje",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Organami OREW są:&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Dyrektor, który odpowiada za politykę personalną OREW, jest bezpośrednim przełożonym pracowników OREW. Do jego zadań należy między innymi:</p><p>&nbsp; &nbsp; a) organizowanie pracy oraz kierowanie bieżącą działalnością OREW;</p><p>&nbsp; &nbsp; b) organizowanie prac związanych z awansem zawodowym nauczycieli;</p><p>&nbsp; &nbsp; c) realizowanie uchwał Zarządu Koła;&nbsp;</p><p>&nbsp; &nbsp; d) sprawowanie nadzoru pedagogicznego;&nbsp;</p><p>&nbsp; &nbsp; e) nadzór nad realizacją programów realizowanych przez OREW;</p><p>&nbsp; &nbsp; f) kierowanie pracami Rady Programowej.</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. Rada Programowa, którą powołuje i kieruje jej działalnością dyrektor. Rada Programowa jest stałym, kolegialnym organem OREW, w której skład wchodzą: nauczyciele-terapeuci, &nbsp;psycholodzy, fizjoterapeuci, logopedzi oraz inni specjaliści zatrudnieni w OREW.</p>"
+    },
+    "orew-struktura-organizacyjna-i-wlasnosciowa": {
+        "name": "Struktura organizacyjna i własnościowa",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Organem prowadzącym OREW jest Polskie Stowarzyszenie na rzecz Osób z Niepełnosprawnością Intelektualną Koło w Staszowie.</p>"
+    },
+    "orew-majatek": {
+        "name": "Majątek",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "brak"
+    },
+    "orew-tryb-dzialania": {
+        "name": "Tryb działania",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>Ośrodek Rehabilitacyjno-Edukacyjno-Wychowawczy w Staszowie działa na podstawie:</p><p>&nbsp; &nbsp; 1. ustawy z dnia 14 grudnia 2016 r. Prawo Oświatowe i wydanych na jej podstawie aktów wykonawczych;</p><p>&nbsp; &nbsp; 2. statutu Polskiego Stowarzyszenia na rzecz Osób z Niepełnosprawnością Intelektualną;</p><p>&nbsp; &nbsp; 3. innych aktów wewnętrznych.</p>"
+    },
+    "orew-sposoby-przyjmowania-i-zalatwiania-spraw": {
+        "name": "Sposoby przyjmowania i załatwiania spraw",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "<p>&nbsp; &nbsp; 1. Osobiście w siedzibie OREW w Staszowie przy ul. Rytwiańskiej 23, w godz. 7.00-15.00.</p><p>&nbsp; &nbsp; 2. Pocztą na adres Ośrodka Rehabilitacyjno-Edukacyjno-Wychowawczego w Staszowie, ul. Rytwiańska 23, 28-200 Staszów.</p><p>&nbsp; &nbsp; 3. Pocztą elektroniczną na adres mailowy: orew.staszow@psouu.org.pl</p>"
+    },
+    "orew-informacje-o-prowadzonych-rejestrach-ewidencjach-i-archiwach-oraz-o-sposobach-i-zasadach-udostepniania-danych-w-nich-zawartych": {
+        "name": "Informacje o prowadzonych rejestrach, ewidencjach i archiwach oraz o sposobach i zasadach udostępniania danych w nich zawartych",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "brak"
+    },
+    "orew-nabor-kandydatow-do-zatrudnienia-na-wolne-stanowiska": {
+        "name": "Nabór kandydatów do zatrudnienia na wolne stanowiska",
+        "page_code": "orew",
+        "menu_order": 1,
+        "description": "brak"
+    },
+    "nps-status-prawny-forma-prawna": {
+        "name": "Status prawny/forma prawna",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Niepubliczne Przedszkole Specjalne „Promyk Słońca” w Staszowie (NPS) jest placówką oświatową.</p>"
+    },
+    "nps-organizacja": {
+        "name": "Organizacja",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Organizację określa Statut NPS.</p>"
+    },
+    "nps-przedmiot-dzialalnosci": {
+        "name": "Przedmiot działalności",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Niepubliczne Przedszkole Specjalne „Promyk Słońca” w Staszowie zapewnia:</p><p>&nbsp; &nbsp; • wychowanie przedszkolne dla dzieci w wieku 3-5 lat,</p><p>&nbsp; &nbsp; • roczne przygotowanie przedszkolne dla dzieci 6 letnich oraz dzieci, którym odroczono rozpoczęcie spełniania obowiązku szkolnego (do 9 roku życia),</p><p>&nbsp; &nbsp; • realizację podstawy programowej wychowania przedszkolnego,</p><p>&nbsp; &nbsp; • profesjonalną organizację zajęć wychowania przedszkolnego i rocznego przygotowania przedszkolnego dostosowaną do indywidualnych potrzeb i możliwości dziecka,</p><p>&nbsp; &nbsp; • zajęcia rewalidacyjne (terapia zaburzeń mowy, rozwijanie kompetencji komunikacyjnych, AAC; zajęcia wspomagające rozwój sfery poznawczej, emocjonalno-motywacyjnej i społecznej; zajęcia rozwijające samodzielność osobistą i społeczną; zajęcia wspomagające rozwój koordynacji wzrokowo-słuchowo-ruchowej; zajęcia rozwijające sprawność i kondycję fizyczną),</p><p>&nbsp; &nbsp; • realizację zaleceń zawartych w orzeczeniu o potrzebie kształcenia specjalnego,</p><p>&nbsp; &nbsp; • udział w zajęciach specjalistycznych prowadzonych w ramach pomocy psychologiczno-pedagogicznej, w tym terapii pedagogicznej, logopedycznej, psychologicznej i rehabilitacji ruchowej.</p>"
+    },
+    "nps-organy-i-osoby-sprawujace-funkcje-i-ich-kompetencje": {
+        "name": "Organy i osoby sprawujące funkcje i ich kompetencje",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Organami NPS są:&nbsp;</p><p>&nbsp; &nbsp; 1. Dyrektor, który między innymi:</p><p>&nbsp; &nbsp; a) kieruje działalnością przedszkola i reprezentuje je na zewnątrz;</p><p>&nbsp; &nbsp; b) realizuje uchwały Rady Pedagogicznej, podjęte w ramach jej kompetencji;&nbsp;</p><p>&nbsp; &nbsp; c) sprawuje nadzór pedagogiczny;&nbsp;</p><p>&nbsp; &nbsp; d) współpracuje z Radą Pedagogiczną i rodzicami.</p><p>&nbsp; &nbsp; 2. Rada Pedagogiczna, która jest kolegialnym organem przedszkola w zakresie realizacji jego statutowych działań dotyczących opieki, wychowania i kształcenia. W jej skład wchodzą wszyscy pracownicy merytoryczni zatrudnieni w przedszkolu.&nbsp;</p><p>&nbsp; &nbsp; 3. Rada Rodziców (w przypadku powołania), którą może stanowić trzyosobowa reprezentacja rodziców dzieci uczęszczających do przedszkola, wybrana większością głosów przez rodziców na okres bieżącego roku szkolnego.</p>"
+    },
+    "nps-struktura-organizacyjna-i-wlasnosciowa": {
+        "name": "Struktura organizacyjna i własnościowa",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Organem prowadzącym NPS jest Polskie Stowarzyszenie na rzecz Osób z Niepełnosprawnością Intelektualną Koło w Staszowie.</p>"
+    },
+    "nps-majatek": {
+        "name": "Majątek",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "brak"
+    },
+    "nps-tryb-dzialania": {
+        "name": "Tryb działania",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>Niepubliczne Przedszkole Specjalne „Promyk Słońca” w Staszowie działa na podstawie:</p><p>&nbsp; &nbsp; 1. ustawy z dnia 14 grudnia 2016 r. Prawo Oświatowe i wydanych na jej podstawie aktów wykonawczych;</p><p>&nbsp; &nbsp; 2. ustawy z dnia 14 grudnia 2016 r. przepisy wprowadzające ustawę Prawo Oświatowe oraz wydanych na jej podstawie aktów wykonawczych;</p><p>&nbsp; &nbsp; 3. statutu Niepublicznego Przedszkola Specjalnego „Promyk Słońca” w Staszowie.</p>"
+    },
+    "nps-sposoby-przyjmowania-i-zalatwiania-spraw": {
+        "name": "Sposoby przyjmowania i załatwiania spraw",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "<p>&nbsp; &nbsp; 1. Osobiście w siedzibie NPS w Staszowie przy ul. Rytwiańskiej 23, w godz. 7.00-15.00.</p><p>&nbsp; &nbsp; 2. Pocztą na adres Niepublicznego Przedszkola Specjalnego „Promyk Słońca” w Staszowie, ul. Rytwiańska 23, 28-200 Staszów.</p><p>&nbsp; &nbsp; 3. Pocztą elektroniczną na adres mailowy: nps.promyk@psouu-staszow.org</p>"
+    },
+    "nps-informacje-o-prowadzonych-rejestrach-ewidencjach-i-archiwach-oraz-o-sposobach-i-zasadach-udostepniania-danych-w-nich-zawartych": {
+        "name": "Informacje o prowadzonych rejestrach, ewidencjach i archiwach oraz o sposobach i zasadach udostępniania danych w nich zawartych",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "brak"
+    },
+    "nps-nabor-kandydatow-do-zatrudnienia-na-wolne-stanowiska": {
+        "name": "Nabór kandydatów do zatrudnienia na wolne stanowiska",
+        "page_code": "nps",
+        "menu_order": 1,
+        "description": "brak"
+    }
+}
