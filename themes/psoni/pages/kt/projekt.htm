@@ -1,0 +1,15 @@
+url = "/kt/projekt/:slug"
+layout = "kt"
+title = "KT | Szczegóły projektu"
+
+[projectItem]
+slug = {{ :slug }}
+==
+<div class="title-border">
+    <h1 class="py-1 text-center">Szczegóły projektu</h1>
+</div>
+<div class="container">
+    <div class="row">
+        {% component 'projectItem' %}
+    </div>
+</div>

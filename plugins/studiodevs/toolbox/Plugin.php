@@ -51,6 +51,8 @@ class Plugin extends PluginBase
             'Studiodevs\Toolbox\Components\DashboardItem' => 'dashboardItem',
             'Studiodevs\Toolbox\Components\DonorsList' => 'donors',
             'Studiodevs\Toolbox\Components\TeamDetails' => 'team',
+            'Studiodevs\Toolbox\Components\ProjectsList' => 'projectsList',
+            'Studiodevs\Toolbox\Components\ProjectItem' => 'projectItem',
         ];
     }
 
@@ -102,6 +104,11 @@ class Plugin extends PluginBase
                         'label'       => 'Tablice informacyjne',
                         'icon'        => 'icon-object-group',
                         'url'         => Backend::url('studiodevs/toolbox/dashboards'),
+                    ],
+                    'projects' => [
+                        'label'       => 'Projekty PFRON',
+                        'icon'        => 'icon-common-file-star',
+                        'url'         => Backend::url('studiodevs/toolbox/projects'),
                     ],
                 ]
             ],

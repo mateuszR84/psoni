@@ -1,6 +1,9 @@
 url = "/ord/o-projekcie"
 layout = "ord"
 title = "O projekcie"
+
+[projectsList]
+program = "ord"
 ==
 
 <div class="title-border">
@@ -27,73 +30,9 @@ title = "O projekcie"
         <p>Wkład własny PSONI: 24 634,01 zł</p>
         <p>Data podpisania umowy: 14.05.2024 r.</p>
         <p>Więcej informacji o projekcie można uzyskać kontaktując się z koordynatorem projektu – tel. 15 864 37 09.</p>
-        <p>Obecnie trwa I okres finansowania projektu, w którym bierze udział 40 osób, w tym:
-        <ul>
-            <li>35 osoby to dzieci, młodzież i osoby dorosłe z niepełnosprawnością intelektualną umiarkowanego i
-                znacznego stopnia ze sprzężeniami oraz osoby z głęboką niepełnosprawnością intelektualną uczęszczające
-                do Ośrodka Rehabilitacyjno-Edukacyjno-Wychowawczego w Staszowie oraz dzieci z niepełnosprawnością
-                ruchową, autyzmem, z niepełnosprawnością intelektualną uczęszczające do Niepublicznego Przedszkola
-                Specjalnego ,,Promyk Słońca” w Staszowie,</li>
-            <li>5 osób – dzieci i młodzież do 16 roku życia z niepełnosprawnością ruchową, intelektualną, autyzmem,
-                których rodzice są członkami PSONI Koło w Staszowie.</li>
-        </ul>
 
-        <p>Całkowite koszty I okresu finansowania projektu: 676 459,33 zł</p>
-        <p>Kwota dofinansowania I okresu finansowania projektu ze środków PFRON: 668 851,06 zł</p>
-        <p>Wkład własny PSONI w I okresie finansowania projektu: 7 608,27 zł</p>
-        <p>Harmonogram działań w ramach projektu:</p>
-        <table style="height: 832px;"
-               width="902">
-            <tbody>
-                <tr>
-                    <td width="236"><strong>działanie</strong></td>
-                    <td width="368"><strong>termin realizacji</strong></td>
-                </tr>
-                <tr>
-                    <td width="236">Rekrutacja beneficjentów projektu</td>
-                    <td width="368">kwiecień 2024 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Diagnoza funkcjonalna</td>
-                    <td width="368">kwiecień 2024 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Opracowanie IPD</td>
-                    <td width="368">kwiecień 2024 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Realizacja IPD</td>
-                    <td width="368">kwiecień 2024 r. – marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Zakup pomocy i materiałów do zajęć</td>
-                    <td width="368">kwiecień 2024 r. – marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Ewaluacja IPD</td>
-                    <td width="368">marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Cykliczne spotkania Zespołu Terapeutycznego</td>
-                    <td width="368">kwiecień 2024 r., lipiec 2024 r., grudzień 2024 r., marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Promocja projektu</td>
-                    <td width="368">kwiecień 2024 r. – marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Monitoring projektu</td>
-                    <td width="368">kwiecień 2024 r. – marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Obsługa administracyjna</td>
-                    <td width="368">kwiecień 2024 r. – marzec 2025 r.</td>
-                </tr>
-                <tr>
-                    <td width="236">Podsumowanie realizacji projektu</td>
-                    <td width="368">marzec 2025 r.</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3 class="mb-3">Lista projektów:</h3>
+
+        {% component 'projectsList' %}
     </div>
 </div>

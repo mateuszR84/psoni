@@ -10,3 +10,6 @@ v1.2.0:
 v1.3.0:
     - 'Add Dashboard model'
     - 1_3_0_create_dashboards_table.php
+v1.4.0:
+    - 'Add Project model'
+    - 1_4_0_create_projects_table.php
