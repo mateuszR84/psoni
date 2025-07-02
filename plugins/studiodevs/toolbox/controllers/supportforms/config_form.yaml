@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Support Form
+
+# Model Form Field configuration
+form: $/studiodevs/toolbox/models/supportform/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Toolbox\Models\SupportForm
+
+# Default redirect location
+defaultRedirect: studiodevs/toolbox/supportforms
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/toolbox/supportforms/update/:id
+    redirectClose: studiodevs/toolbox/supportforms
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/toolbox/supportforms
+    redirectClose: studiodevs/toolbox/supportforms
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,13 +1,11 @@
-<?php
-
-namespace Studiodevs\Toolbox\Updates;
+<?php namespace StudioDevs\Toolbox\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
 /**
- * CreateProjectsTable Migration
+ * CreateSupportFormsTable Migration
  *
  * @link https://docs.octobercms.com/3.x/extend/database/structure.html
  */
@@ -18,7 +16,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('studiodevs_toolbox_projects', function (Blueprint $table) {
+        Schema::create('studiodevs_toolbox_support_forms', function(Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug');
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studiodevs_toolbox_projects');
+        Schema::dropIfExists('studiodevs_toolbox_support_forms');
     }
 };

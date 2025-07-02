@@ -53,6 +53,8 @@ class Plugin extends PluginBase
             'Studiodevs\Toolbox\Components\TeamDetails' => 'team',
             'Studiodevs\Toolbox\Components\ProjectsList' => 'projectsList',
             'Studiodevs\Toolbox\Components\ProjectItem' => 'projectItem',
+            'Studiodevs\Toolbox\Components\SupportFormsList' => 'supportFormsList',
+            'Studiodevs\Toolbox\Components\SupportFormItem' => 'supportFormItem',
         ];
     }
 
@@ -109,6 +111,11 @@ class Plugin extends PluginBase
                         'label'       => 'Projekty PFRON',
                         'icon'        => 'icon-common-file-star',
                         'url'         => Backend::url('studiodevs/toolbox/projects'),
+                    ],
+                    'support_forms' => [
+                        'label'       => 'Formy wsparcia',
+                        'icon'        => 'icon-user-group',
+                        'url'         => Backend::url('studiodevs/toolbox/supportforms'),
                     ],
                 ]
             ],

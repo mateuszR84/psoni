@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Nazwa
+        type: text
+        span: left
+    
+    program:
+        label: Program
+        type: dropdown
+        span: right
+    
+    excerpt:
+        label: Zajawka
+        type: textarea
+        span: full
+        size: small
+
+    content:
+        label: Treść
+        type: richeditor
+        span: full
+        size: giant

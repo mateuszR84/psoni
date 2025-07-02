@@ -1,6 +1,9 @@
 url = "/kt/wsparcie"
 layout = "kt"
 title = "Formy wsparcia"
+
+[supportFormsList]
+program = "kt"
 ==
 
 <div class="title-border">
@@ -8,49 +11,6 @@ title = "Formy wsparcia"
 </div>
 <div class="container">
     <div class="row">
-        <p>Klub Terapeutyczny oferuje osobom z niepełnosprawnością intelektualną po zakończeniu obowiązku szkolnego
-            udział w terapii zajęciowej podzielonej na:</p>
-
-        <p><strong>Ergoterapię:</strong></p>
-        <ul>
-            <li>ogrodnictwo (prace ogrodnicze i porządkowe na placu przy budynku PSONI, koszenie i przycinanie trawy,
-                zamiatanie ścieżek, pielęgnacja klombów, mini-uprawy – wykonywanie prac typu sianie, sadzenie,
-                pielenie),</li>
-            <li>garncarstwo i ceramikę (wyrabianie naczyń ozdobnych z gliny, zdobienie przedmiotów ceramicznych),</li>
-            <li>stolarstwo (prace w drewnie, wykonywanie drobnych przedmiotów użytkowych z drewna),</li>
-            <li>hafciarstwo (wykonywanie haftów płaskich),</li>
-            <li>tkactwo (tkanie na mini-krośnie, na ramkach, wyplatanie makram),</li>
-            <li>krawiectwo (reperowanie odzieży, szycie rzeczy użytkowych, prace z filcu),</li>
-            <li>kaletnictwo (tworzenie wyrobów ze skóry),</li>
-            <li>praca przy komputerze (przepisywanie tekstów, komputerowe opracowywanie kart okolicznościowych i
-                świątecznych, projektowanie i wykonywanie zaproszeń, wizytówek, praca z wykorzystaniem Internetu)</li>
-        </ul>
-
-        <p><strong>Socjoterapię:</strong></p>
-        <ul>
-            <li>terapię ruchem(ćwiczenia oddechowe, poranne, rytmika i taniec, tańce w kręgu, przygotowanie i estetyczne
-                podanie prostych poczęstunków, imprezy integracyjne),</li>
-            <li>rekreację (silwoterapię – oddziaływanie pięknem przyrody, spacery po parku, spacery po lesie, spacery po
-                mieście, zwiedzanie, oglądanie występów artystycznych organizowanych przez społeczność lokalną,
-                wycieczki organizowane zgodnie z potrzebami i zainteresowaniami beneficjentów projektu),</li>
-            <li>ludoterapię/zabawoterapię (czynności manipulacyjne, gry tematyczne, konstrukcyjne, dydaktyczne).</li>
-        </ul>
-
-        <p><strong>Arteterapię:</strong></p>
-        <ul>
-            <li>rysunek za pomocą zróżnicowanych technik plastycznych,</li>
-            <li>rzeźbę (prace w masach plastycznych, papieroplastyka),</li>
-            <li>grafikę (gipsoryt, linoryt, monotypia, druk),</li>
-            <li>malarstwo (z wykorzystaniemmiędzy innymi farb plakatowych, akwareli, farb olejnych, farb do szkła),</li>
-            <li>filmoterapię (projekcję, nagrywanie filmów),</li>
-            <li>sztuki użytkowe (witraż, fotografia, collage),</li>
-            <li>zdobnictwo i dekoratorstwo (ikebana, dekoracje okolicznościowe, zdobienie przedmiotów użytkowych),</li>
-            <li>muzykoterapię (muzykoterapia aktywna – śpiew, gra na instrumentach, ruch przy muzyce, improwizacje,
-                muzykoterapia bierna, receptywna – słuchanie muzyki, relaksacja i wizualizacja),</li>
-            <li>biblioterapię (słuchanie tekstów biblioterapeutycznych, praca z książką, głośne czytanie tekstu, ciche
-                czytanie, słuchanie nagranego tekstu, rozmowa o czytanym tekście, rozmowa o bohaterach i ocena ich
-                zachowania, proponowanie innego zakończenia, wykonywanie ilustracji do czytanego tekstu, wcielanie się w
-                rolę głównego bohatera i odgrywanie tej roli).</li>
-        </ul>
+        {% component 'supportFormsList' %}
     </div>
 </div>

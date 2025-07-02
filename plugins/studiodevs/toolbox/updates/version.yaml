@@ -13,3 +13,6 @@ v1.3.0:
 v1.4.0:
     - 'Add Project model'
     - 1_4_0_create_projects_table.php
+v1.5.0:
+    - 'Add SupportForms model'
+    - 1_5_0_create_support_forms_table.php

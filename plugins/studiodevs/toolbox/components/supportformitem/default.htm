@@ -1,0 +1,8 @@
+{% set supportForm = __SELF__.supportForm %}
+
+<div class="my-5">
+    <h3 class="py-1">{{ supportForm.name }}</h3>
+    <hr>
+</div>
+
+<div class="mt-1 content mb-3">{{ supportForm.content|content }}</div>

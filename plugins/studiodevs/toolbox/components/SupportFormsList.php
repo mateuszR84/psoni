@@ -1,23 +1,23 @@
 <?php
 
-namespace Studiodevs\Toolbox\Components;
+namespace StudioDevs\Toolbox\Components;
 
 use Cms\Classes\ComponentBase;
-use Studiodevs\Toolbox\Models\Project;
+use StudioDevs\Toolbox\Models\SupportForm;
 
 /**
- * ProjectsList Component
+ * SupportFormsList Component
  *
  * @link https://docs.octobercms.com/3.x/extend/cms-components.html
  */
-class ProjectsList extends ComponentBase
+class SupportFormsList extends ComponentBase
 {
-    public $projects;
+    public $supportForms;
 
     public function componentDetails()
     {
         return [
-            'name' => 'Projects List Component',
+            'name' => 'Support Forms List Component',
             'description' => 'No description provided yet...'
         ];
     }
@@ -31,7 +31,7 @@ class ProjectsList extends ComponentBase
             'program' => [
                 'title' => 'Projekt',
                 'type' => 'dropdown',
-                'options' => Project::getProgramOptions(),
+                'options' => SupportForm::getProgramOptions(),
             ]
         ];
     }
@@ -39,6 +39,6 @@ class ProjectsList extends ComponentBase
     public function onRun()
     {
         $program = $this->property('program');
-        $this->projects = Project::forProgram($program)->get();
+        $this->supportForms = SupportForm::forProgram($program)->get();
     }
 }

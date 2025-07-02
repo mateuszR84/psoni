@@ -1,0 +1,16 @@
+url = "/mt/wsparcie/:slug"
+layout = "mt"
+title = "Formy wsparcia - szczegóły"
+
+[supportFormItem]
+slug = {{ :slug }}
+==
+
+<div class="title-border">
+    <h1 class="py-1 text-center">Szczegóły</h1>
+</div>
+<div class="container">
+    <div class="row">
+        {% component 'supportFormItem' %}
+    </div>
+</div>

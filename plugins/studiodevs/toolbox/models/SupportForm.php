@@ -1,15 +1,15 @@
 <?php
 
-namespace Studiodevs\Toolbox\Models;
+namespace StudioDevs\Toolbox\Models;
 
 use Model;
 
 /**
- * Project Model
+ * SupportForm Model
  *
  * @link https://docs.octobercms.com/3.x/extend/system/models.html
  */
-class Project extends Model
+class SupportForm extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sluggable;
@@ -17,7 +17,7 @@ class Project extends Model
     /**
      * @var string table name
      */
-    public $table = 'studiodevs_toolbox_projects';
+    public $table = 'studiodevs_toolbox_support_forms';
 
     /**
      * @var array rules for validation

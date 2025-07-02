@@ -1,16 +1,16 @@
 <?php
 
-namespace Studiodevs\Toolbox\Controllers;
+namespace StudioDevs\Toolbox\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Projects Backend Controller
+ * Support Forms Backend Controller
  *
  * @link https://docs.octobercms.com/3.x/extend/system/controllers.html
  */
-class Projects extends Controller
+class SupportForms extends Controller
 {
     public $implement = [
         \Backend\Behaviors\FormController::class,
@@ -30,7 +30,7 @@ class Projects extends Controller
     /**
      * @var array required permissions
      */
-    public $requiredPermissions = ['studiodevs.toolbox.projects'];
+    public $requiredPermissions = ['studiodevs.toolbox.supportforms'];
 
     /**
      * __construct the controller
@@ -39,6 +39,6 @@ class Projects extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Studiodevs.Toolbox', 'toolbox', 'projects');
+        BackendMenu::setContext('StudioDevs.Toolbox', 'toolbox', 'supportforms');
     }
 }
