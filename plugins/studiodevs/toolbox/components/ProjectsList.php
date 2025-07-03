@@ -39,6 +39,6 @@ class ProjectsList extends ComponentBase
     public function onRun()
     {
         $program = $this->property('program');
-        $this->projects = Project::forProgram($program)->get();
+        $this->projects = Project::forProgram($program)->orderBy('created_at', 'desc')->get();
     }
 }

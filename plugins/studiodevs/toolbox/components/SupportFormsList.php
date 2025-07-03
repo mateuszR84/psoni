@@ -39,6 +39,6 @@ class SupportFormsList extends ComponentBase
     public function onRun()
     {
         $program = $this->property('program');
-        $this->supportForms = SupportForm::forProgram($program)->get();
+        $this->supportForms = SupportForm::forProgram($program)->orderBy('created_at', 'desc')->get();
     }
 }
