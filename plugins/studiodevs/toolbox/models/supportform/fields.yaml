@@ -7,12 +7,18 @@ fields:
         label: Nazwa
         type: text
         span: left
-    
+
     program:
         label: Program
         type: dropdown
         span: right
-    
+
+    published_at:
+        label: Data publikacji
+        type: datepicker
+        mode: date
+        span: left
+
     excerpt:
         label: Zajawka
         type: textarea
