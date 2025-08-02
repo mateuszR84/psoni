@@ -31,7 +31,7 @@ class ReportsList extends ComponentBase
             'active' => [
                 'title' => 'Rok',
                 'description' => 'Ustaw rok najnowszego sprawozdania',
-                'default' => '2023',
+                'default' => '2024',
                 'type' => 'string',
             ]
         ];
