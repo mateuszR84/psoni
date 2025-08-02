@@ -39,7 +39,7 @@ class ReportsList extends ComponentBase
 
     public function onRun() 
     {
-        $this->reports = Report::get();    
+        $this->reports = Report::orderBy('year', 'desc')->get();    
         $this->active = $this->property('active');
     }
 }
