@@ -1,0 +1,12 @@
+url = "/pu/wsm/tablica/:slug"
+layout = "pu-wsm"
+title = "Tablica informacyjna"
+
+[dashboardItem]
+slug = "{{ :slug }}"
+==
+<div class="container">
+    <div class="row mb-3 mt-3">
+        {% component 'dashboardItem' %}    
+    </div>
+</div>

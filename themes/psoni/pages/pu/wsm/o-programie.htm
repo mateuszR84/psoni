@@ -1,0 +1,21 @@
+url = "/pu/wsm/o-programie"
+layout = "pu-wsm"
+title = "O programie"
+
+[projectsList]
+program = "pu-wsm"
+==
+
+<div class="title-border">
+    <h1 class="py-1 text-center">O programie</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <img src="{{ 'assets/img/psoni/pfron_logo.gif' | theme }}"
+                 alt="logo-pfron">
+        </div>
+
+        {% component 'projectsList' %}
+    </div>
+</div>

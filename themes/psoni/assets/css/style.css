@@ -103,7 +103,11 @@ th {
 }
 
 .pu {
-    background-color: #BC4F2F;
+    background-color: #bc4f2f;
+}
+
+.pu-wsm {
+    background-color: #bc7f2f;
 }
 
 .pp {
@@ -173,6 +177,12 @@ th {
 .wsm-nav {
     font-weight: 200px;
     border-top: #aa8b26 4px solid;
+    background-color: #fff;
+}
+
+.pu-wsm-nav {
+    font-weight: 200px;
+    border-top: #bc7f2f 4px solid;
     background-color: #fff;
 }
 

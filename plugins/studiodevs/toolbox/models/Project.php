@@ -37,7 +37,8 @@ class Project extends Model
             'mt' => 'MT',
             'kt' => 'KT',
             'wsm' => 'WSM',
-            'ord' => 'ORD'
+            'ord' => 'ORD',
+            'pu-wsm' => 'PU WSM'
         ];
     }
 
