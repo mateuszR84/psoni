@@ -1,82 +1,69 @@
 <nav class="navbar navbar-expand-lg pu-nav mb-2 sticky-top">
   <div class="container-fluid">
     <div class="collapse navbar-collapse text-center d-flex justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
-        </li>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ 'home'|page }}">Strona główna</a>
+            </li>
         
         {# Świetlica nav #}
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Świetlica terapeutyczna</a>
-            <ul class="dropdown-menu" aria-labelledby="swietlicaDropdown">
-                <li class="nav-item">
-                <a class="nav-link" href="{{ 'pu/swietlica/o-projekcie'|page }}">O projekcie</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ 'pu/swietlica/pu'|page }}" id="aktualnosci" role="button" data-toggle="dropdown" aria-expanded="false">Aktualności</a>
-                    <ul class="dropdown-menu" aria-labelledby="aktualnosci">
-                        <li>
-                            <a class="dropdown-item" href="{{ 'pu/swietlica/galeria'|page }}">Galeria</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Formy wsparcia</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ 'pu/swietlica/osoby'|page }}">Osoby z niepełnosprawnością intelektualną</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ 'pu/swietlica/rodzice'|page }}">Rodzice osób z niepełnosprawnością intelektualną</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rekrutacja</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ 'pu/swietlica/pliki'|page }}">Pliki do pobrania</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{{ 'pu/swietlica/dokumenty'|page }}">Dokumenty</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{ 'pu/swietlica/rynek'|page }}">Rozeznanie rynku</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{ 'pu/swietlica/przetargi'|page }}">Przetargi</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{ 'pu/swietlica/kontakt'|page }}">Kontakt</a>
-                </li>
-            </ul>
-        </li>
-        
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Świetlica terapeutyczna</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/o-projekcie'|page }}">O projekcie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/pu'|page }}">Aktualności</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/galeria'|page }}">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/osoby'|page }}">Osoby z niepełnosprawnością intelektualną</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/rodzice'|page }}">Rodzice osób z niepełnosprawnością intelektualną</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/pliki'|page }}">Pliki do pobrania</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/dokumenty'|page }}">Dokumenty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/rynek'|page }}">Rozeznanie rynku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/przetargi'|page }}">Przetargi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/swietlica/kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </li>
         {# WSM nav #}
-        <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">WSM</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ 'pu/wsm/wsm'|page }}">Aktualności</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ 'pu/wsm/o-programie'|page }}">O programie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ 'pu/wsm/tablice'|page }}">Tablice informacyjne</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ 'pu/wsm/galeria'|page }}">Galeria</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ 'pu/wsm/kontakt'|page }}">Kontakt</a>
-        </li>
-            </ul>
-        </li>
-      </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">WSM</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/wsm/wsm'|page }}">Aktualności</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/wsm/o-programie'|page }}">O programie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/wsm/tablice'|page }}">Tablice informacyjne</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/wsm/galeria'|page }}">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="{{ 'pu/wsm/kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
   </div>
 </nav>
