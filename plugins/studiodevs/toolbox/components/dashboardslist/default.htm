@@ -1,6 +1,7 @@
+{% set itemPage = __SELF__.dashboardItemPage %}
 <ul class="post-list">
     {% for dashboard in __SELF__.dashboards %}
-    <a href={{ 'wsm/tablica'|page({slug: dashboard.slug}) }}>
+    <a href={{ itemPage|page({slug: dashboard.slug}) }}>
         <div class="card mb-3">
             <div class="row no-gutters">
                 <div class="col-md-12">

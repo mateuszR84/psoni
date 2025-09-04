@@ -1,5 +1,6 @@
 <?php namespace Studiodevs\Toolbox\Components;
 
+use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use Studiodevs\Toolbox\Models\Dashboard;
 
@@ -11,6 +12,7 @@ use Studiodevs\Toolbox\Models\Dashboard;
 class DashboardsList extends ComponentBase
 {
     public $dashboards;
+    public $dashboardItemPage;
 
     public function componentDetails()
     {
@@ -30,7 +32,11 @@ class DashboardsList extends ComponentBase
                 'title' => 'Projekt',
                 'type' => 'dropdown',
                 'options' => Dashboard::getProjectOptions(),
-            ]
+            ],
+            'dashboardItemPage' => [
+                'title' => 'Page',
+                'type'  => 'dropdown',
+            ],
         ];
     }
 
@@ -38,5 +44,12 @@ class DashboardsList extends ComponentBase
     {
         $project = $this->property('project');
         $this->dashboards = Dashboard::forProject($project)->orderBy('created_at', 'desc')->get();
+
+        $this->dashboardItemPage = $this->property('dashboardItemPage');
+    }
+
+    public function getDashboardItemPageOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 }

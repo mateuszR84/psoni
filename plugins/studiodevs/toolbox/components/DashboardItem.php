@@ -13,7 +13,7 @@ use Studiodevs\Toolbox\Models\Dashboard;
 class DashboardItem extends ComponentBase
 {
     public $dashboard;
-    
+
     public function componentDetails()
     {
 
