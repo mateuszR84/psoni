@@ -13,6 +13,7 @@ class DashboardsList extends ComponentBase
 {
     public $dashboards;
     public $dashboardItemPage;
+    public $displayMode;
 
     public function componentDetails()
     {
@@ -37,6 +38,23 @@ class DashboardsList extends ComponentBase
                 'title' => 'Page',
                 'type'  => 'dropdown',
             ],
+            'displayMode' => [
+                'title' => 'Display Mode',
+                'type'  => 'dropdown',
+            ],
+        ];
+    }
+    
+    public function getDashboardItemPageOptions()
+    {
+        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+    }
+
+    public function getDisplayModeOptions()
+    {
+        return [
+            'single' => 'Single',
+            'multiple' => 'Multiple',
         ];
     }
 
@@ -46,10 +64,6 @@ class DashboardsList extends ComponentBase
         $this->dashboards = Dashboard::forProject($project)->orderBy('created_at', 'desc')->get();
 
         $this->dashboardItemPage = $this->property('dashboardItemPage');
-    }
-
-    public function getDashboardItemPageOptions()
-    {
-        return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+        $this->displayMode = $this->property('displayMode');
     }
 }

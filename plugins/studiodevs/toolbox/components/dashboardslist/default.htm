@@ -1,17 +1,5 @@
-{% set itemPage = __SELF__.dashboardItemPage %}
-<ul class="post-list">
-    {% for dashboard in __SELF__.dashboards %}
-    <a href={{ itemPage|page({slug: dashboard.slug}) }}>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-12">
-                    <div class="card-body">
-                        <h3 class="card-title mb-3">{{ dashboard.title }}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-    {% endfor %}
-</ul>
-
+{% if __SELF__.displayMode == 'single' %}
+    {% partial '@single' %}
+{% else %}
+    {% partial '@multiple' %}
+{% endif %}
