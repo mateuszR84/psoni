@@ -29,10 +29,16 @@ class Dashboard extends Model
         'image' => \System\Models\File::class
     ];
 
-    public function getProjectOptions(): array 
+    public static function getProjectOptions(): array
     {
         return [
-            'wsm' => 'WSM'
+            'wsm' => 'WSM',
+            'pu-wsm' => 'PU-WSM'
         ];
+    }
+
+    public function scopeForProject($query, string $project)
+    {
+        return $query->where('project', $project);
     }
 }

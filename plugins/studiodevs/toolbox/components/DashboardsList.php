@@ -25,11 +25,18 @@ class DashboardsList extends ComponentBase
      */
     public function defineProperties()
     {
-        return [];
+        return [
+            'project' => [
+                'title' => 'Projekt',
+                'type' => 'dropdown',
+                'options' => Dashboard::getProjectOptions(),
+            ]
+        ];
     }
 
     public function onRun()
     {
-        $this->dashboards = Dashboard::get();
+        $project = $this->property('project');
+        $this->dashboards = Dashboard::forProject($project)->orderBy('created_at', 'desc')->get();
     }
 }
