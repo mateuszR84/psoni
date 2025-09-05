@@ -63,7 +63,7 @@ class DashboardsList extends ComponentBase
         $project = $this->property('project');
         $this->dashboards = Dashboard::forProject($project)->orderBy('created_at', 'desc')->get();
 
-        $this->dashboardItemPage = $this->property('dashboardItemPage');
         $this->displayMode = $this->property('displayMode');
+        $this->dashboardItemPage = $this->property('dashboardItemPage');
     }
 }
