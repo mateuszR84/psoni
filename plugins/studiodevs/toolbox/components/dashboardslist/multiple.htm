@@ -1,6 +1,5 @@
-{% set itemPage = __SELF__.dashboardItemPage %}
 <ul class="post-list">
-    {% for dashboard in __SELF__.dashboards %}
+    {% for dashboard in dashboards %}
     <a href={{ itemPage|page({slug: dashboard.slug}) }}>
         <div class="card mb-3">
             <div class="row no-gutters">

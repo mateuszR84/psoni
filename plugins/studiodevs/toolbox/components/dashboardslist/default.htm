@@ -1,5 +1,5 @@
 {% if __SELF__.displayMode == 'single' %}
     {% partial '@single' dashboard = __SELF__.dashboards[0] %}
 {% else %}
-    {% partial '@multiple' dashboards = __SELF__.dashboards %}
+    {% partial '@multiple' dashboards = __SELF__.dashboards itemPage = __SELF__.dashboardItemPage %}
 {% endif %}
