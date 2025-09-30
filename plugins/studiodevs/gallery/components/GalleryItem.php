@@ -64,6 +64,7 @@ class GalleryItem extends ComponentBase
             'wsm-galeria' => '/wsm/galeria',
             'ord-galeria' => '/ord/galeria',
             'pu-galeria' => '/pu/galeria',
+	    'pu-wsm-galeria' => '/pu/wsm/galeria',
         ];
 
         return url($redirectsArray[$categorySlug]);
