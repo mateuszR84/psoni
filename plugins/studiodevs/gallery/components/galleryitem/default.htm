@@ -1,4 +1,5 @@
 {% set gallery = __SELF__.gallery %}
+{% set images = __SELF__.images %}
 
 <div class="col-md-6 mb-4 d-flex jusify-content-between align-items-center">
     {% if gallery.published_at %}
@@ -9,9 +10,9 @@
     </a>
 </div>
 
-{% if gallery.images.count %}
+{% if images.count %}
     <div class="gallery" id="gallery">
-        {% for image in gallery.images %}
+        {% for image in images %}
             <a href="{{ image.path }}">
                 <img
                     src="{{ image.path }}"

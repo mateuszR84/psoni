@@ -14,6 +14,8 @@ class GalleryItem extends ComponentBase
 {
     public $gallery;
 
+    public $images;
+
     public function componentDetails()
     {
         return [
@@ -45,7 +47,10 @@ class GalleryItem extends ComponentBase
 
     public function onRun()
     {
-        $this->gallery = Gallery::where('slug', $this->property('slug'))->first();
+        $gallery = Gallery::where('slug', $this->property('slug'))->first();
+        $this->gallery = $gallery;
+
+        $this->images = $gallery->images->sortBy('file_name');
     }
 
     public function getCategoryUrl(string $categorySlug = null)
