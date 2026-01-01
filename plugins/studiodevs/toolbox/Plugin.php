@@ -58,6 +58,7 @@ class Plugin extends PluginBase
             'Studiodevs\Toolbox\Components\ProjectItem' => 'projectItem',
             'Studiodevs\Toolbox\Components\SupportFormsList' => 'supportFormsList',
             'Studiodevs\Toolbox\Components\SupportFormItem' => 'supportFormItem',
+            'Studiodevs\Toolbox\Components\ArchivedPosts' => 'archivedPosts',
         ];
     }
 
