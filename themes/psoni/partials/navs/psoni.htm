@@ -50,9 +50,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ 'psoni/placowka'|page }}">Placówka w Kurozwękach</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href={{ 'psoni/przetargi'|page }}>Przetargi</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{ 'psoni/przetargi'|page }}" id="przetargi" role="button" data-toggle="dropdown" aria-expanded="false">Przetargi</a>
+                    <ul class="dropdown-menu" aria-labelledby="przetargi">
+                        <li>
+                            <a class="dropdown-item" href="{{ 'psoni/przetargi-archiwum'|page }}">Archiwum</a>
+                        </li>
+                    </ul>
                 </li>
+                {# <li class="nav-item">
+                    <a class="nav-link" href={{ 'psoni/przetargi'|page }}>Przetargi</a>
+                </li> #}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ 'psoni/kontakt'|page }}">Kontakt</a>
                 </li>

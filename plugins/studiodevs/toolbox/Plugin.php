@@ -1,5 +1,8 @@
-<?php namespace Studiodevs\Toolbox;
+<?php
 
+namespace Studiodevs\Toolbox;
+
+use Event;
 use Backend;
 use Studiodevs\Toolbox\Models\Settings;
 use System\Classes\PluginBase;
@@ -37,7 +40,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        //
+        Event::subscribe(\StudioDevs\Toolbox\EventHandlers\PostHandler::class);
     }
 
     /**
@@ -55,6 +58,7 @@ class Plugin extends PluginBase
             'Studiodevs\Toolbox\Components\ProjectItem' => 'projectItem',
             'Studiodevs\Toolbox\Components\SupportFormsList' => 'supportFormsList',
             'Studiodevs\Toolbox\Components\SupportFormItem' => 'supportFormItem',
+            'Studiodevs\Toolbox\Components\ArchivedPosts' => 'archivedPosts',
         ];
     }
 
@@ -135,7 +139,7 @@ class Plugin extends PluginBase
             ],
         ];
     }
-    
+
     public function registerMarkupTags()
     {
         return [
@@ -144,5 +148,4 @@ class Plugin extends PluginBase
             ]
         ];
     }
-
 }

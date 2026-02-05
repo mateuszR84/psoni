@@ -1,0 +1,25 @@
+url = "/psoni/przetargi-archiwum"
+layout = "psoni"
+title = "Archiwum przetargów"
+
+[archivedPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "psoni-przetargi"
+postsPerPage = 10
+noPostsMessage = "Brak aktualności"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "psoni/news-item"
+is_archived = 1
+==
+<div class="title-border">
+    <h1 class="py-1 text-center">Archiwum przetargów</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="mt-4 mb-5">
+        {% component 'archivedPosts' %}
+            {% partial 'posts/postlist' posts=posts %}
+        </div>
+    </div>
+</div>

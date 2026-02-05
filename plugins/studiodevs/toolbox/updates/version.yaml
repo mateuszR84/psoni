@@ -19,3 +19,7 @@ v1.5.0:
 v1.6.0:
     - 'Add published_at field to Project and SupportForms models'
     - 1_6_0_add_published_at_projects_support_forms_table.php
+
+v1.7.0:
+    - 'Extend Post model, add is_archived field'
+    - 1_7_0_add_is_archived_posts_table.php
