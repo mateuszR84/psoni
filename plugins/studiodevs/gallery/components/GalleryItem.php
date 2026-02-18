@@ -50,7 +50,7 @@ class GalleryItem extends ComponentBase
         $gallery = Gallery::where('slug', $this->property('slug'))->first();
         $this->gallery = $gallery;
 
-        $this->images = $gallery->images->sortBy('file_name');
+        $this->images = $gallery->images->sortBy('sort_order');
     }
 
     public function getCategoryUrl(string $categorySlug = null)
